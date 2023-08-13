@@ -1,0 +1,6 @@
+[book]
+authors = ["Benedikt Radtke"]
+language = "en"
+multilingual = false
+src = "src"
+title = "Patrician 3 Insights"

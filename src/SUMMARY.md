@@ -1,0 +1,13 @@
+# Summary
+[Patrician 3](./README.md)
+[Introduction](./ch00-00-introduction.md)
+- [Getting Started](./ch01-00-getting-started.md)
+- [Basics](./ch02-00-basics.md)
+    - [Wares](./ch02-01-wares.md)
+    - [Ship Weapons](./ch02-02-ship-weapons.md)
+    - [Storage](./ch02-03-storage.md)
+- [Operations](./ch03-00-operations.md)
+- [Towns](./ch04-00-towns.md)
+    - [Storage](./ch04-01-storage.md)
+    - [Population](./ch04-01-population.md)
+- [Merchants](./ch05-00-merchants.md)
