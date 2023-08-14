@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Patrician 3</a></li><li class="chapter-item expanded affix "><a href="ch00-00-introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="ch01-00-getting-started.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="ch02-00-basics.html"><strong aria-hidden="true">2.</strong> Basics</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch02-01-wares.html"><strong aria-hidden="true">2.1.</strong> Wares</a></li><li class="chapter-item expanded "><a href="ch02-02-ship-weapons.html"><strong aria-hidden="true">2.2.</strong> Ship Weapons</a></li><li class="chapter-item expanded "><a href="ch02-03-storage.html"><strong aria-hidden="true">2.3.</strong> Storage</a></li></ol></li><li class="chapter-item expanded "><a href="ch03-00-operations.html" class="active"><strong aria-hidden="true">3.</strong> Operations</a></li><li class="chapter-item expanded "><a href="ch04-00-towns.html"><strong aria-hidden="true">4.</strong> Towns</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch04-01-storage.html"><strong aria-hidden="true">4.1.</strong> Storage</a></li><li class="chapter-item expanded "><a href="ch04-01-population.html"><strong aria-hidden="true">4.2.</strong> Population</a></li></ol></li><li class="chapter-item expanded "><a href="ch05-00-merchants.html"><strong aria-hidden="true">5.</strong> Merchants</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Patrician 3 Insights</a></li><li class="chapter-item expanded affix "><a href="ch00-00-introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="ch01-00-getting-started.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="ch02-00-basics.html"><strong aria-hidden="true">2.</strong> Basics</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch02-01-wares.html"><strong aria-hidden="true">2.1.</strong> Wares</a></li><li class="chapter-item expanded "><a href="ch02-02-ship-weapons.html"><strong aria-hidden="true">2.2.</strong> Ship Weapons</a></li><li class="chapter-item expanded "><a href="ch02-03-ships.html"><strong aria-hidden="true">2.3.</strong> Ships</a></li><li class="chapter-item expanded "><a href="ch02-100-storage.html"><strong aria-hidden="true">2.4.</strong> Storage</a></li></ol></li><li class="chapter-item expanded "><a href="ch03-00-operations.html" class="active"><strong aria-hidden="true">3.</strong> Operations</a></li><li class="chapter-item expanded "><a href="ch04-00-towns.html"><strong aria-hidden="true">4.</strong> Towns</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch04-01-storage.html"><strong aria-hidden="true">4.1.</strong> Storage</a></li><li class="chapter-item expanded "><a href="ch04-01-population.html"><strong aria-hidden="true">4.2.</strong> Population</a></li><li class="chapter-item expanded "><a href="ch04-01-shipyard.html"><strong aria-hidden="true">4.3.</strong> Shipyard</a></li></ol></li><li class="chapter-item expanded "><a href="ch05-00-merchants.html"><strong aria-hidden="true">5.</strong> Merchants</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -167,12 +167,69 @@
                 <div id="content" class="content">
                     <main>
                         <h1 id="operations"><a class="header" href="#operations">Operations</a></h1>
+<p>P3 handles most changes to the world and its elements through <em>operations</em>.
+An operation is a 20 bytes wide struct, where the first u32 denotes the operation's type, and the following 16 bytes contain the operation's arguments.</p>
+<h2 id="scheduling"><a class="header" href="#scheduling">Scheduling</a></h2>
+<p>While the game executes operation handlers directly sometimes, usually operations are scheduled by inserting them into the <em>pending operations</em> queue in the static <code>operations</code> struct at <code>006DF2F0</code>:</p>
+<pre><code>00000000 operations      struc ; (sizeof=0x948, mappedto_126)
+[...]
+00000048 field_48_pending_operations operation_switch_input_container ?
+0000046C field_46C       dd ?
+00000470 field_470_pending_operations_in_use dd ?
+00000474 field_474_current_operations operation_switch_input_container ?
+[...]
+</code></pre>
+<p>The <code>operation_switch_input_container</code> struct contains an array of 53 operations.
+The function <code>schedule_operation</code> at <code>0x00543F10</code> inserts an operation at the next free position, creating a new <code>operation_switch_input_container</code> and appending it to the last full one if necessary.</p>
+<h2 id="execution"><a class="header" href="#execution">Execution</a></h2>
+<p>The function <code>execute_operations</code> at <code>0x00546870</code> executes up to 53 operations from <code>operations</code> and executes them.</p>
+<h2 id="debugging"><a class="header" href="#debugging">Debugging</a></h2>
+<p>The following IDC script adds scripted breakpoints to the executing and scheduling functions, allowing the investigation of P3's operation behavior:</p>
+<pre><code>static handle_operation_switch() {
+    auto ptr = GetRegValue(&quot;esi&quot;);
+    auto operationSwitchInput = OperationSwitchInput(ptr);
+    // Ignore noisy operations
+    if (operationSwitchInput.opcode() == 0x94) {
+        return 0;
+    }
+    if (operationSwitchInput.opcode() == 0x24) {
+        return 0;
+    }
+    if (operationSwitchInput.opcode() == 0x7B) {
+        return 0;
+    }
+    
+    Message(operationSwitchInput.toString());
+
+    return 0;
+}
+
+static handle_insert_into_pending_operations_wrapper() {
+    auto ptr = GetRegValue(&quot;eax&quot;);
+    auto operationSwitchInput = OperationSwitchInput(ptr);
+    // Ignore noisy operations
+    if (operationSwitchInput.opcode() == 0x94) {
+        return 0; // weird thing
+    }
+
+    Message(&quot;handle_insert_into_pending_operations_wrapper %s&quot;, operationSwitchInput.toString());
+
+    return 0;
+}
+
+static main() {
+    auto bp = AddBpt(0x0053576B);
+    SetBptCnd(0x0053576B, &quot;handle_operation_switch()&quot;);
+    auto bp2 = AddBpt(0x0054AABD);
+    SetBptCnd(0x0054AABD, &quot;handle_insert_into_pending_operations_wrapper()&quot;);
+}
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="ch02-03-storage.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="ch02-100-storage.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
@@ -186,7 +243,7 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="ch02-03-storage.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="ch02-100-storage.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 

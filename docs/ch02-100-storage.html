@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Merchants - Patrician 3 Insights</title>
+        <title>Storage - Patrician 3 Insights</title>
 
 
         <!-- Custom HTML head -->
@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Patrician 3 Insights</a></li><li class="chapter-item expanded affix "><a href="ch00-00-introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="ch01-00-getting-started.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="ch02-00-basics.html"><strong aria-hidden="true">2.</strong> Basics</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch02-01-wares.html"><strong aria-hidden="true">2.1.</strong> Wares</a></li><li class="chapter-item expanded "><a href="ch02-02-ship-weapons.html"><strong aria-hidden="true">2.2.</strong> Ship Weapons</a></li><li class="chapter-item expanded "><a href="ch02-03-ships.html"><strong aria-hidden="true">2.3.</strong> Ships</a></li><li class="chapter-item expanded "><a href="ch02-100-storage.html"><strong aria-hidden="true">2.4.</strong> Storage</a></li></ol></li><li class="chapter-item expanded "><a href="ch03-00-operations.html"><strong aria-hidden="true">3.</strong> Operations</a></li><li class="chapter-item expanded "><a href="ch04-00-towns.html"><strong aria-hidden="true">4.</strong> Towns</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch04-01-storage.html"><strong aria-hidden="true">4.1.</strong> Storage</a></li><li class="chapter-item expanded "><a href="ch04-01-population.html"><strong aria-hidden="true">4.2.</strong> Population</a></li><li class="chapter-item expanded "><a href="ch04-01-shipyard.html"><strong aria-hidden="true">4.3.</strong> Shipyard</a></li></ol></li><li class="chapter-item expanded "><a href="ch05-00-merchants.html" class="active"><strong aria-hidden="true">5.</strong> Merchants</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Patrician 3 Insights</a></li><li class="chapter-item expanded affix "><a href="ch00-00-introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="ch01-00-getting-started.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="ch02-00-basics.html"><strong aria-hidden="true">2.</strong> Basics</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch02-01-wares.html"><strong aria-hidden="true">2.1.</strong> Wares</a></li><li class="chapter-item expanded "><a href="ch02-02-ship-weapons.html"><strong aria-hidden="true">2.2.</strong> Ship Weapons</a></li><li class="chapter-item expanded "><a href="ch02-03-ships.html"><strong aria-hidden="true">2.3.</strong> Ships</a></li><li class="chapter-item expanded "><a href="ch02-100-storage.html" class="active"><strong aria-hidden="true">2.4.</strong> Storage</a></li></ol></li><li class="chapter-item expanded "><a href="ch03-00-operations.html"><strong aria-hidden="true">3.</strong> Operations</a></li><li class="chapter-item expanded "><a href="ch04-00-towns.html"><strong aria-hidden="true">4.</strong> Towns</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch04-01-storage.html"><strong aria-hidden="true">4.1.</strong> Storage</a></li><li class="chapter-item expanded "><a href="ch04-01-population.html"><strong aria-hidden="true">4.2.</strong> Population</a></li><li class="chapter-item expanded "><a href="ch04-01-shipyard.html"><strong aria-hidden="true">4.3.</strong> Shipyard</a></li></ol></li><li class="chapter-item expanded "><a href="ch05-00-merchants.html"><strong aria-hidden="true">5.</strong> Merchants</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -166,16 +166,51 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="merchants"><a class="header" href="#merchants">Merchants</a></h1>
+                        <h1 id="storage"><a class="header" href="#storage">Storage</a></h1>
+<p>The <code>storage</code> struct contains a town's or an office's current wares and related data.
+Some of the fields have been identified:</p>
+<pre><code>00000000 ; derived from post-malloc initialization of office and town
+00000000 storage         struc ; (sizeof=0x2C0, mappedto_146)
+00000000                                         ; XREF: town/r
+00000000                                         ; office/r
+00000000 field_0         dw ?
+00000002 field_2         dw ?
+00000004 field_4_current_wares dd 24 dup(?)
+00000064 field_64_daily_consumptions_businesses dd 24 dup(?)
+000000C4 field_C4_daily_production dd 24 dup(?)
+00000124 field_124_ship_weapons dd 6 dup(?)
+0000013C field_13C_prod_time_series storage_production_time_series 20 dup(?)
+0000027C field_27C       dd ?
+00000280 field_280       dd ?
+00000284 field_284       dd ?
+00000288 field_288       dd ?
+0000028C field_28C       dd ?
+00000290 field_290       dd ?
+00000294 field_294       dd ?
+00000298 field_298       dd ?
+0000029C field_29C       dd ?
+000002A0 field_2A0       dd ?
+000002A4 field_2A4       dd ?
+000002A8 field_2A8       dd ?
+000002AC field_2AC       dd ?
+000002B0 field_2B0       dd ?
+000002B4 field_2B4       dd ?
+000002B8 field_2B8       dd ?
+000002BC field_2BC_cutlasses dd ?
+000002C0 storage         ends
+</code></pre>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="ch04-01-shipyard.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="ch02-03-ships.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
+                            <a rel="next" href="ch03-00-operations.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -183,10 +218,13 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="ch04-01-shipyard.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="ch02-03-ships.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
+                    <a rel="next" href="ch03-00-operations.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
             </nav>
 
         </div>

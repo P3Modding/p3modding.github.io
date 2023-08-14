@@ -1,5 +1,4 @@
 # Ship Weapons
-
 Ship Weapons are represented by the following enum:
 ```rust
 pub enum ShipWeaponId {
@@ -14,7 +13,8 @@ pub enum ShipWeaponId {
 Cutlasses are not ship weapons.
 
 ## Ship Weapon Scaling
-The amounts P3 displays in-agem are not the values the game uses under the hood.
+The amounts P3 displays in-game are not the values the game uses under the hood.
+Every ship weapon has a scaling factor, through which the game divides the actual values.
 
 A table that maps every `ShipWeaponId` to its scaling factor can be found at `0x00672CB4`.
 This reveals the following factors:

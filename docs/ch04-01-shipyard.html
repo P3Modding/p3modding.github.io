@@ -3,7 +3,7 @@
     <head>
         <!-- Book generated using mdBook -->
         <meta charset="UTF-8">
-        <title>Merchants - Patrician 3 Insights</title>
+        <title>Shipyard - Patrician 3 Insights</title>
 
 
         <!-- Custom HTML head -->
@@ -83,7 +83,7 @@
 
         <nav id="sidebar" class="sidebar" aria-label="Table of contents">
             <div class="sidebar-scrollbox">
-                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Patrician 3 Insights</a></li><li class="chapter-item expanded affix "><a href="ch00-00-introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="ch01-00-getting-started.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="ch02-00-basics.html"><strong aria-hidden="true">2.</strong> Basics</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch02-01-wares.html"><strong aria-hidden="true">2.1.</strong> Wares</a></li><li class="chapter-item expanded "><a href="ch02-02-ship-weapons.html"><strong aria-hidden="true">2.2.</strong> Ship Weapons</a></li><li class="chapter-item expanded "><a href="ch02-03-ships.html"><strong aria-hidden="true">2.3.</strong> Ships</a></li><li class="chapter-item expanded "><a href="ch02-100-storage.html"><strong aria-hidden="true">2.4.</strong> Storage</a></li></ol></li><li class="chapter-item expanded "><a href="ch03-00-operations.html"><strong aria-hidden="true">3.</strong> Operations</a></li><li class="chapter-item expanded "><a href="ch04-00-towns.html"><strong aria-hidden="true">4.</strong> Towns</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch04-01-storage.html"><strong aria-hidden="true">4.1.</strong> Storage</a></li><li class="chapter-item expanded "><a href="ch04-01-population.html"><strong aria-hidden="true">4.2.</strong> Population</a></li><li class="chapter-item expanded "><a href="ch04-01-shipyard.html"><strong aria-hidden="true">4.3.</strong> Shipyard</a></li></ol></li><li class="chapter-item expanded "><a href="ch05-00-merchants.html" class="active"><strong aria-hidden="true">5.</strong> Merchants</a></li></ol>
+                <ol class="chapter"><li class="chapter-item expanded affix "><a href="index.html">Patrician 3 Insights</a></li><li class="chapter-item expanded affix "><a href="ch00-00-introduction.html">Introduction</a></li><li class="chapter-item expanded "><a href="ch01-00-getting-started.html"><strong aria-hidden="true">1.</strong> Getting Started</a></li><li class="chapter-item expanded "><a href="ch02-00-basics.html"><strong aria-hidden="true">2.</strong> Basics</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch02-01-wares.html"><strong aria-hidden="true">2.1.</strong> Wares</a></li><li class="chapter-item expanded "><a href="ch02-02-ship-weapons.html"><strong aria-hidden="true">2.2.</strong> Ship Weapons</a></li><li class="chapter-item expanded "><a href="ch02-03-ships.html"><strong aria-hidden="true">2.3.</strong> Ships</a></li><li class="chapter-item expanded "><a href="ch02-100-storage.html"><strong aria-hidden="true">2.4.</strong> Storage</a></li></ol></li><li class="chapter-item expanded "><a href="ch03-00-operations.html"><strong aria-hidden="true">3.</strong> Operations</a></li><li class="chapter-item expanded "><a href="ch04-00-towns.html"><strong aria-hidden="true">4.</strong> Towns</a></li><li><ol class="section"><li class="chapter-item expanded "><a href="ch04-01-storage.html"><strong aria-hidden="true">4.1.</strong> Storage</a></li><li class="chapter-item expanded "><a href="ch04-01-population.html"><strong aria-hidden="true">4.2.</strong> Population</a></li><li class="chapter-item expanded "><a href="ch04-01-shipyard.html" class="active"><strong aria-hidden="true">4.3.</strong> Shipyard</a></li></ol></li><li class="chapter-item expanded "><a href="ch05-00-merchants.html"><strong aria-hidden="true">5.</strong> Merchants</a></li></ol>
             </div>
             <div id="sidebar-resize-handle" class="sidebar-resize-handle"></div>
         </nav>
@@ -166,16 +166,54 @@
 
                 <div id="content" class="content">
                     <main>
-                        <h1 id="merchants"><a class="header" href="#merchants">Merchants</a></h1>
+                        <h1 id="shipyard"><a class="header" href="#shipyard">Shipyard</a></h1>
+<h2 id="shipbuilding"><a class="header" href="#shipbuilding">Shipbuilding</a></h2>
+<p>The <code>handle_build_ship</code> function is at <code>0x0052A360</code>.</p>
+<h3 id="quality-levels"><a class="header" href="#quality-levels">Quality Levels</a></h3>
+<p>A shipyard's current quality level of each ship type is stored in the town's current ship level array, indexed by the ship type.
+The <code>u8</code> values range from 0 to 3.</p>
+<h3 id="hp-and-capacity"><a class="header" href="#hp-and-capacity">HP and Capacity</a></h3>
+<p>A ship's HP and capacity depend on the respective quality level.
+At <code>0x00673838</code> there is a table that holds the <em>structure base values</em> for every ship type and quality level:</p>
+<div class="table-wrapper"><table><thead><tr><th>Type</th><th>Quality Level 0</th><th>Quality Level 1</th><th>Quality Level 2</th><th>Quality Level 3</th></tr></thead><tbody>
+<tr><td>Snaikka</td><td>15</td><td>19</td><td>23</td><td>25</td></tr>
+<tr><td>Craier</td><td>28</td><td>31</td><td>34</td><td>35</td></tr>
+<tr><td>Cog</td><td>45</td><td>48</td><td>52</td><td>55</td></tr>
+<tr><td>Hulk</td><td>55</td><td>59</td><td>65</td><td>70</td></tr>
+</tbody></table>
+</div>
+<p>To the structure base value an unknown value is added, which appears to be always zero. The resulting structure value is capped at the value of QL 3.</p>
+<p>HP and Capacity scale linearly with the structure value:</p>
+<pre><code>capacity = 2000 * structure_value
+health = 2800 * structure_value
+</code></pre>
+<p>For a QL 3 hulk, this yields the expected capacity of 140.000 (700 barrels).</p>
+<h3 id="resources-and-price"><a class="header" href="#resources-and-price">Resources and Price</a></h3>
+<p>The <code>calculate_ship_build_cost</code> function is at <code>0x0052B2C0</code>.
+At <code>0x0066DEB0</code> there is a table that contains the requirements of every ship type and quality level, capped at QL 2 (QL 3 does not increase cost):</p>
+<div class="table-wrapper"><table><thead><tr><th>Type</th><th>QL</th><th>Timber</th><th>Cloth</th><th>Hemp</th><th>Pitch</th><th>Iron Goods</th><th>Unknown</th><th>Base Price</th><th>Unknown</th></tr></thead><tbody>
+<tr><td>Snaikka</td><td>0</td><td>7</td><td>3</td><td>3</td><td>3</td><td>20</td><td>17</td><td>7.650</td><td>11.414</td></tr>
+<tr><td>Snaikka</td><td>1</td><td>9</td><td>3</td><td>3</td><td>3</td><td>20</td><td>20</td><td>8.200</td><td>12.074</td></tr>
+<tr><td>Snaikka</td><td>2</td><td>11</td><td>3</td><td>3</td><td>3</td><td>20</td><td>24</td><td>8.800</td><td>12.784</td></tr>
+<tr><td>Craier</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>Cog</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+<tr><td>Hulk</td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td><td></td></tr>
+</tbody></table>
+</div>
+<h2 id="repairs"><a class="header" href="#repairs">Repairs</a></h2>
+<h2 id="upgrade-levels"><a class="header" href="#upgrade-levels">Upgrade Levels</a></h2>
 
                     </main>
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="ch04-01-shipyard.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="ch04-01-population.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
+                            <a rel="next" href="ch05-00-merchants.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
 
                         <div style="clear: both"></div>
                     </nav>
@@ -183,10 +221,13 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="ch04-01-shipyard.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="ch04-01-population.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 
+                    <a rel="next" href="ch05-00-merchants.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
             </nav>
 
         </div>
