@@ -32,10 +32,7 @@ At `0x006736A0` there is a table that contains for every difficulty the *base sa
 
 |Needs|Rich|Wealthy|Poor|
 |-|-|-|-|
-|Low|249|244|236|
-|Normal|243|238|229|
-|High|236|231|224|
-
-
-
+|Low|-7|-12|-20|
+|Normal|-13|-18|-27|
+|High|-20|-25|-32|
 
