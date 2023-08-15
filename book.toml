@@ -4,6 +4,3 @@ language = "en"
 multilingual = false
 src = "src"
 title = "Patrician 3 Insights"
-
-[build]
-build-dir = "docs"
