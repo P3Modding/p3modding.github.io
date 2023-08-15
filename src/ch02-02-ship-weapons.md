@@ -1,4 +1,4 @@
-# Ship Weapons
+# Ship Weapon Types
 Ship Weapons are represented by the following enum:
 ```rust
 pub enum ShipWeaponId {

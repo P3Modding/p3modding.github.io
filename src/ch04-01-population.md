@@ -1,5 +1,0 @@
-# Population
-
-## Consumption
-
-## Satisfaction

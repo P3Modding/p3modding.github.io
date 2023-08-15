@@ -1,4 +1,4 @@
-# Wares
+# Ware Types
 Wares are represented by the following enum:
 ```rust
 pub enum WareId {
