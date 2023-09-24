@@ -1,7 +1,7 @@
 # New Settlement Ware Production Bug
 
 ## Summary
-Do to an [off-by-one error](https://en.wikipedia.org/wiki/Off-by-one_error), a town founded through the alderman mission does not produce the goods the Hanse needs most, but instead those of the adjacent facility id.
+Due to an [off-by-one error](https://en.wikipedia.org/wiki/Off-by-one_error), a town founded through the alderman mission does not produce the goods the Hanse needs most, but instead those with an adjacent facility id.
 
 ## Details
 The `determine_new_settlement` function at `0x00532E30` calculates the wares with the biggest need.
