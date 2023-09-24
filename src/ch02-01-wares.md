@@ -28,7 +28,7 @@ pub enum WareId {
     Carbine = 0x17,
 }
 ```
-Although the militia weapon are part of the wares enum, the game often uses loops and mapping arrays that exclude them.
+Although the militia weapons are part of the wares enum, the game often uses loops and mapping arrays that exclude them.
 
 ## Ware Scaling
 The amounts P3 displays in-game are not the values the game uses under the hood.

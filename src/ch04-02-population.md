@@ -3,7 +3,7 @@
 ## Consumption
 The `do_population_consumption` function is at `0x00527D40`.
 
-At `0x00672860` there is a table that contains the daily consumptions for all citizen classes:
+At `0x00672860` there is a table that contains the daily consumptions for 100 citizens of every population type:
 
 |Ware|Rich|Wealthy|Poor|Beggars|
 |-|-|-|-|-|

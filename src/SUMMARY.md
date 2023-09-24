@@ -13,3 +13,5 @@
     - [Population](./ch04-02-population.md)
     - [Shipyard](./ch04-01-shipyard.md)
 - [Merchants](./ch05-00-merchants.md)
+- [Known Bugs](./ch30-00-known-bugs.md)
+    - [New Settlement Ware Production](./ch30-01-new-settlement-ware-production.md)
