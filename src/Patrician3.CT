@@ -1,0 +1,431 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CheatTable CheatEngineTableVersion="45">
+  <Forms>
+    <UDF1 Class="TCEForm" Encoding="Ascii85">O@=wEf/O;OC*YHrzM{WY^vcPSK+*!!o,}F@P+;I:]iUUuJA+!/Op%zU%Y{2#ya7PO.ldU=2$e3)ogcbpgcoAZfwe{NX2fPD6RKi(7#=Io88e5_*tTfKxhhGk,.)@n$)lTMb8UXCNUGBMktRHsSW=d!x4FmoSj*5(vcNdrum=C1kM@kR24FAe%]LzYJ@pW}m3%:bX}d1A.kAlJ.%o=uu7Z(]p0,wcZG7K[4+</UDF1>
+  </Forms>
+  <CheatEntries/>
+  <UserdefinedSymbols/>
+  <Structures StructVersion="2">
+    <Structure Name="Town" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+      <Elements>
+        <Element Offset="0" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000000" DisplayMethod="unsigned integer"/>
+        <Element Offset="4" Vartype="4 Bytes" Bytesize="4" RLECount="19" OffsetHex="00000004" DisplayMethod="signed integer"/>
+        <Element Offset="80" Vartype="Pointer" Bytesize="4" OffsetHex="00000050" DisplayMethod="unsigned integer">
+          <Structure Name="Autocreated from 00018A8D" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+            <Elements>
+              <Element Offset="0" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="00000000" DisplayMethod="unsigned integer"/>
+              <Element Offset="3" Vartype="4 Bytes" Bytesize="4" RLECount="1023" OffsetHex="00000003" DisplayMethod="unsigned integer"/>
+              <Element Offset="4095" Vartype="Byte" Bytesize="1" OffsetHex="00000FFF" DisplayMethod="unsigned integer"/>
+            </Elements>
+          </Structure>
+        </Element>
+        <Element Offset="84" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000054" DisplayMethod="unsigned integer"/>
+        <Element Offset="88" Vartype="Pointer" Bytesize="4" OffsetHex="00000058" DisplayMethod="unsigned integer"/>
+        <Element Offset="92" Vartype="4 Bytes" Bytesize="4" OffsetHex="0000005C" DisplayMethod="unsigned integer"/>
+        <Element Offset="96" Vartype="Byte" Bytesize="1" OffsetHex="00000060" DisplayMethod="unsigned integer"/>
+        <Element Offset="97" Vartype="String" Bytesize="4" OffsetHex="00000061" DisplayMethod="unsigned integer"/>
+        <Element Offset="101" Vartype="Byte" Bytesize="1" RLECount="4" OffsetHex="00000065" DisplayMethod="unsigned integer"/>
+        <Element Offset="105" Vartype="String" Bytesize="4" OffsetHex="00000069" DisplayMethod="unsigned integer"/>
+        <Element Offset="109" Vartype="Byte" Bytesize="1" RLECount="8" OffsetHex="0000006D" DisplayMethod="unsigned integer"/>
+        <Element Offset="117" Vartype="String" Bytesize="4" OffsetHex="00000075" DisplayMethod="unsigned integer"/>
+        <Element Offset="121" Vartype="Byte" Bytesize="1" RLECount="12" OffsetHex="00000079" DisplayMethod="unsigned integer"/>
+        <Element Offset="133" Vartype="String" Bytesize="7" OffsetHex="00000085" DisplayMethod="unsigned integer"/>
+        <Element Offset="140" Vartype="Pointer" Bytesize="4" OffsetHex="0000008C" DisplayMethod="unsigned integer"/>
+        <Element Offset="144" Vartype="Byte" Bytesize="1" RLECount="5" OffsetHex="00000090" DisplayMethod="unsigned integer"/>
+        <Element Offset="149" Vartype="String" Bytesize="7" OffsetHex="00000095" DisplayMethod="unsigned integer"/>
+        <Element Offset="156" Vartype="Byte" Bytesize="1" RLECount="4" OffsetHex="0000009C" DisplayMethod="unsigned integer"/>
+        <Element Offset="160" Vartype="Pointer" Bytesize="4" OffsetHex="000000A0" DisplayMethod="unsigned integer"/>
+        <Element Offset="164" Vartype="String" Bytesize="4" OffsetHex="000000A4" DisplayMethod="unsigned integer"/>
+        <Element Offset="168" Vartype="Byte" Bytesize="1" OffsetHex="000000A8" DisplayMethod="unsigned integer"/>
+        <Element Offset="169" Vartype="String" Bytesize="7" OffsetHex="000000A9" DisplayMethod="unsigned integer"/>
+        <Element Offset="176" Vartype="Byte" Bytesize="1" OffsetHex="000000B0" DisplayMethod="unsigned integer"/>
+        <Element Offset="177" Vartype="String" Bytesize="11" OffsetHex="000000B1" DisplayMethod="unsigned integer"/>
+        <Element Offset="188" Vartype="Byte" Bytesize="1" RLECount="5" OffsetHex="000000BC" DisplayMethod="unsigned integer"/>
+        <Element Offset="193" Vartype="String" Bytesize="8" OffsetHex="000000C1" DisplayMethod="unsigned integer"/>
+        <Element Offset="201" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="000000C9" DisplayMethod="unsigned integer"/>
+        <Element Offset="204" Vartype="Pointer" Bytesize="4" RLECount="130" OffsetHex="000000CC" DisplayMethod="unsigned integer"/>
+        <Element Offset="724" Vartype="4 Bytes" Bytesize="4" OffsetHex="000002D4" DisplayMethod="unsigned integer"/>
+        <Element Offset="728" Vartype="Pointer" Bytesize="4" RLECount="3" OffsetHex="000002D8" DisplayMethod="unsigned integer"/>
+        <Element Offset="740" Vartype="4 Bytes" Bytesize="4" OffsetHex="000002E4" DisplayMethod="unsigned integer"/>
+        <Element Offset="744" Vartype="Pointer" Bytesize="4" OffsetHex="000002E8" DisplayMethod="unsigned integer"/>
+        <Element Offset="748" Vartype="4 Bytes" Bytesize="4" OffsetHex="000002EC" DisplayMethod="unsigned integer"/>
+        <Element Offset="752" Vartype="Pointer" Bytesize="4" RLECount="18" OffsetHex="000002F0" DisplayMethod="unsigned integer"/>
+        <Element Offset="824" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000338" DisplayMethod="unsigned integer"/>
+        <Element Offset="828" Vartype="Pointer" Bytesize="4" RLECount="132" OffsetHex="0000033C" DisplayMethod="unsigned integer"/>
+        <Element Offset="1356" Vartype="4 Bytes" Bytesize="4" OffsetHex="0000054C" DisplayMethod="unsigned integer"/>
+        <Element Offset="1360" Vartype="Pointer" Bytesize="4" RLECount="6" OffsetHex="00000550" DisplayMethod="unsigned integer"/>
+        <Element Offset="1384" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000568" DisplayMethod="unsigned integer"/>
+        <Element Offset="1388" Vartype="Pointer" Bytesize="4" RLECount="2" OffsetHex="0000056C" DisplayMethod="unsigned integer"/>
+        <Element Offset="1396" Vartype="Byte" Bytesize="1" RLECount="4" OffsetHex="00000574" DisplayMethod="unsigned integer"/>
+        <Element Offset="1400" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000578" DisplayMethod="unsigned integer"/>
+        <Element Offset="1404" Vartype="Pointer" Bytesize="4" RLECount="3" OffsetHex="0000057C" DisplayMethod="unsigned integer"/>
+        <Element Offset="1416" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000588" DisplayMethod="unsigned integer"/>
+        <Element Offset="1420" Vartype="Pointer" Bytesize="4" OffsetHex="0000058C" DisplayMethod="unsigned integer"/>
+        <Element Offset="1424" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000590" DisplayMethod="unsigned integer"/>
+        <Element Offset="1428" Vartype="Pointer" Bytesize="4" RLECount="43" OffsetHex="00000594" DisplayMethod="unsigned integer"/>
+        <Element Offset="1600" Vartype="4 Bytes" Bytesize="4" RLECount="6" OffsetHex="00000640" DisplayMethod="unsigned integer"/>
+        <Element Offset="1624" Vartype="Pointer" Bytesize="4" RLECount="89" OffsetHex="00000658" DisplayMethod="unsigned integer"/>
+        <Element Offset="1980" Vartype="4 Bytes" Bytesize="4" OffsetHex="000007BC" DisplayMethod="unsigned integer"/>
+        <Element Offset="1984" Vartype="Double" Bytesize="8" RLECount="3" OffsetHex="000007C0" DisplayMethod="unsigned integer"/>
+        <Element Offset="2008" Vartype="4 Bytes" Bytesize="4" OffsetHex="000007D8" DisplayMethod="unsigned integer"/>
+        <Element Offset="2012" Vartype="Pointer" Bytesize="4" OffsetHex="000007DC" DisplayMethod="unsigned integer"/>
+        <Element Offset="2016" Vartype="4 Bytes" Bytesize="4" OffsetHex="000007E0" DisplayMethod="unsigned integer"/>
+        <Element Offset="2020" Vartype="Pointer" Bytesize="4" OffsetHex="000007E4" DisplayMethod="unsigned integer"/>
+        <Element Offset="2024" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="000007E8" DisplayMethod="unsigned integer"/>
+        <Element Offset="2032" Vartype="Pointer" Bytesize="4" RLECount="74" OffsetHex="000007F0" DisplayMethod="unsigned integer"/>
+        <Element Offset="2328" Vartype="Float" Bytesize="4" RLECount="2" OffsetHex="00000918" DisplayMethod="unsigned integer"/>
+        <Element Offset="2336" Vartype="4 Bytes" Bytesize="4" RLECount="7" OffsetHex="00000920" DisplayMethod="unsigned integer"/>
+        <Element Offset="2364" Vartype="Pointer" Bytesize="4" OffsetHex="0000093C" DisplayMethod="unsigned integer"/>
+        <Element Offset="2368" Vartype="4 Bytes" Bytesize="4" RLECount="5" OffsetHex="00000940" DisplayMethod="unsigned integer"/>
+        <Element Offset="2388" Vartype="Pointer" Bytesize="4" OffsetHex="00000954" DisplayMethod="unsigned integer"/>
+        <Element Offset="2392" Vartype="4 Bytes" Bytesize="4" RLECount="5" OffsetHex="00000958" DisplayMethod="unsigned integer"/>
+        <Element Offset="2412" Vartype="Pointer" Bytesize="4" OffsetHex="0000096C" DisplayMethod="unsigned integer"/>
+        <Element Offset="2416" Vartype="4 Bytes" Bytesize="4" RLECount="6" OffsetHex="00000970" DisplayMethod="unsigned integer"/>
+        <Element Offset="2440" Vartype="Pointer" Bytesize="4" RLECount="28" OffsetHex="00000988" DisplayMethod="unsigned integer"/>
+      </Elements>
+    </Structure>
+    <Structure Name="GameWorld" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
+      <Elements>
+        <Element Offset="0" Vartype="4 Bytes" Bytesize="4" RLECount="4" OffsetHex="00000000" DisplayMethod="hexadecimal"/>
+        <Element Offset="16" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000010" DisplayMethod="unsigned integer"/>
+        <Element Offset="20" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000014" DisplayMethod="hexadecimal"/>
+        <Element Offset="24" Vartype="Pointer" Bytesize="4" OffsetHex="00000018" DisplayMethod="unsigned integer"/>
+        <Element Offset="28" Vartype="4 Bytes" Bytesize="4" OffsetHex="0000001C" DisplayMethod="hexadecimal"/>
+        <Element Offset="32" Vartype="Pointer" Bytesize="4" OffsetHex="00000020" DisplayMethod="unsigned integer"/>
+        <Element Offset="36" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000024" DisplayMethod="hexadecimal"/>
+        <Element Offset="44" Vartype="String" Bytesize="5" OffsetHex="0000002C" DisplayMethod="unsigned integer"/>
+        <Element Offset="49" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="00000031" DisplayMethod="unsigned integer"/>
+        <Element Offset="52" Vartype="4 Bytes" Bytesize="4" RLECount="3" OffsetHex="00000034" DisplayMethod="unsigned integer"/>
+        <Element Offset="64" Vartype="4 Bytes" Bytesize="4" RLECount="4" OffsetHex="00000040" DisplayMethod="hexadecimal"/>
+        <Element Offset="80" Vartype="Pointer" Bytesize="4" RLECount="2" OffsetHex="00000050" DisplayMethod="unsigned integer"/>
+        <Element Offset="88" Vartype="4 Bytes" Bytesize="4" RLECount="4" OffsetHex="00000058" DisplayMethod="unsigned integer"/>
+        <Element Offset="104" Vartype="Pointer" Bytesize="4" OffsetHex="00000068" ChildStruct="Town" Description="towns" DisplayMethod="unsigned integer"/>
+        <Element Offset="108" Vartype="Pointer" Bytesize="4" RLECount="5" OffsetHex="0000006C" DisplayMethod="unsigned integer"/>
+        <Element Offset="128" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000080" DisplayMethod="unsigned integer"/>
+        <Element Offset="136" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000088" DisplayMethod="hexadecimal"/>
+        <Element Offset="140" Vartype="Pointer" Bytesize="4" OffsetHex="0000008C" DisplayMethod="unsigned integer"/>
+        <Element Offset="144" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000090" DisplayMethod="hexadecimal"/>
+        <Element Offset="152" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000098" DisplayMethod="unsigned integer"/>
+        <Element Offset="156" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="0000009C" DisplayMethod="hexadecimal"/>
+        <Element Offset="164" Vartype="4 Bytes" Bytesize="4" OffsetHex="000000A4" DisplayMethod="unsigned integer"/>
+        <Element Offset="168" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="000000A8" DisplayMethod="hexadecimal"/>
+        <Element Offset="176" Vartype="4 Bytes" Bytesize="4" OffsetHex="000000B0" DisplayMethod="unsigned integer"/>
+        <Element Offset="180" Vartype="4 Bytes" Bytesize="4" OffsetHex="000000B4" DisplayMethod="hexadecimal"/>
+        <Element Offset="184" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="000000B8" DisplayMethod="unsigned integer"/>
+        <Element Offset="192" Vartype="Pointer" Bytesize="4" OffsetHex="000000C0" DisplayMethod="unsigned integer"/>
+        <Element Offset="196" Vartype="4 Bytes" Bytesize="4" OffsetHex="000000C4" DisplayMethod="hexadecimal"/>
+        <Element Offset="200" Vartype="4 Bytes" Bytesize="4" OffsetHex="000000C8" DisplayMethod="unsigned integer"/>
+        <Element Offset="204" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="000000CC" DisplayMethod="hexadecimal"/>
+        <Element Offset="212" Vartype="4 Bytes" Bytesize="4" OffsetHex="000000D4" DisplayMethod="unsigned integer"/>
+        <Element Offset="216" Vartype="Pointer" Bytesize="4" OffsetHex="000000D8" DisplayMethod="unsigned integer"/>
+        <Element Offset="220" Vartype="4 Bytes" Bytesize="4" OffsetHex="000000DC" DisplayMethod="hexadecimal"/>
+        <Element Offset="224" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="000000E0" DisplayMethod="unsigned integer"/>
+        <Element Offset="232" Vartype="Pointer" Bytesize="4" OffsetHex="000000E8" DisplayMethod="unsigned integer"/>
+      </Elements>
+    </Structure>
+  </Structures>
+  <LuaScript>wareNames =
+{
+ [0x00] = "Grain",
+ [0x01] = "Meat",
+ [0x02] = "Fish",
+ [0x03] = "Beer",
+ [0x04] = "Salt",
+ [0x05] = "Honey",
+ [0x06] = "Spices",
+ [0x07] = "Wine",
+ [0x08] = "Cloth",
+ [0x09] = "Skins",
+ [0x0a] = "WhaleOil",
+ [0x0b] = "Timber",
+ [0x0c] = "IronGoods",
+ [0x0d] = "Leather",
+ [0x0e] = "Wool",
+ [0x0f] = "Pitch",
+ [0x10] = "PigIron",
+ [0x11] = "Hemp",
+ [0x12] = "Pottery",
+ [0x13] = "Bricks",
+ [0x14] = "Sword",
+ [0x15] = "Bow",
+ [0x16] = "Crossbow",
+ [0x17] = "Carbine",
+}
+
+townNames =
+{
+ [0x00] = "Edinburgh",
+ [0x01] = "Newcastle",
+ [0x02] = "Scarborough",
+ [0x03] = "Boston",
+ [0x04] = "London",
+ [0x05] = "Bruges",
+ [0x06] = "Haarlem",
+ [0x07] = "Harlingen",
+ [0x08] = "Groningen",
+ [0x09] = "Cologne",
+ [0x0a] = "Bremen",
+ [0x0b] = "Ripen",
+ [0x0c] = "Hamburg",
+ [0x0d] = "Flensburg",
+ [0x0e] = "Luebeck",
+ [0x0f] = "Rostock",
+ [0x10] = "Bergen",
+ [0x11] = "Stavanger",
+ [0x12] = "Toensberg",
+ [0x13] = "Oslo",
+ [0x14] = "Aalborg",
+ [0x15] = "Goeteborg",
+ [0x16] = "Naestved",
+ [0x17] = "Malmoe",
+ [0x18] = "Ahus",
+ [0x19] = "Stockholm",
+ [0x1a] = "Visby",
+ [0x1b] = "Helsinki",
+ [0x1c] = "Stettin",
+ [0x1d] = "Ruegenwald",
+ [0x1e] = "Gdansk",
+ [0x1f] = "Torun",
+ [0x20] = "Koenigsberg",
+ [0x21] = "Memel",
+ [0x22] = "Windau",
+ [0x23] = "Riga",
+ [0x24] = "Pernau",
+ [0x25] = "Reval",
+ [0x26] = "Ladoga",
+ [0x27] = "Novgorod",
+}
+
+Town = {}
+Town.__index = Town
+
+function getTownId(townIndex)
+    local t = Town:create(townsAddress + townIndex*0x9f8, townIndex)
+    return t:getTownId()
+end
+
+function Town:create(address, index)
+    local obj = {}
+    setmetatable(obj, Town)
+    obj.Address = address
+    obj.Index = index
+    return obj
+end
+
+function Town:getTownId()
+    return readByte(self.Address + 0x2c1)
+end
+
+function Town:createMemoryRecord()
+    local record = addressList.createMemoryRecord()
+    record.IsGroupHeader = true
+    record.Options = "moManualExpandCollapse"
+    record.appendToEntry(townsRecord)
+    record.Description = townNames[self:getTownId()]
+    self:createWaresRecords(record)
+    self:createDailyPopulationConsumptionRecords(record)
+    self:createConsumptionDataRecords(record)
+
+    local famineCounterRecord = addressList.createMemoryRecord()
+    famineCounterRecord.Address = self.Address + 0x2c3;
+    famineCounterRecord.Description = "Famine Counter"
+    famineCounterRecord.Type = vtByte
+    famineCounterRecord.appendToEntry(record)
+
+    local landTaxRateRecord = addressList.createMemoryRecord()
+    landTaxRateRecord.Address = self.Address + 0x2c6;
+    landTaxRateRecord.Description = "Land Tax Rate"
+    landTaxRateRecord.Type = vtByte
+    landTaxRateRecord.appendToEntry(record)
+
+    local headTaxRateRecord = addressList.createMemoryRecord()
+    headTaxRateRecord.Address = self.Address + 0x6f8;
+    headTaxRateRecord.Description = "Head Tax Rate"
+    headTaxRateRecord.Type = vtByte
+    headTaxRateRecord.appendToEntry(record)
+
+    local extraTaxTimestamp = addressList.createMemoryRecord()
+    extraTaxTimestamp.Address = self.Address + 0x6f8;
+    extraTaxTimestamp.Description = "Extra Tax Timestamp"
+    extraTaxTimestamp.appendToEntry(record)
+
+    record.Collapsed = true
+end
+
+function Town:createWaresRecords(parentRecord)
+    local waresRecord = addressList.createMemoryRecord()
+    waresRecord.IsGroupHeader = true
+    waresRecord.Options = "moManualExpandCollapse"
+    waresRecord.Description = "Wares"
+    for i=0,23 do
+          local wareRecord = addressList.createMemoryRecord()
+          wareRecord.Address = self.Address + 0x04 + (i*4)
+          wareRecord.appendToEntry(waresRecord)
+          wareRecord.Description = wareNames[i]
+    end
+    waresRecord.Collapsed = true
+    waresRecord.appendToEntry(parentRecord)
+end
+
+function Town:createDailyPopulationConsumptionRecords(parentRecord)
+    local dailyPopulationConsumption = addressList.createMemoryRecord()
+    dailyPopulationConsumption.IsGroupHeader = true
+    dailyPopulationConsumption.Options = "moManualExpandCollapse"
+    dailyPopulationConsumption.Description = "Daily Population Consumption"
+    for i=0,23 do
+          local wareRecord = addressList.createMemoryRecord()
+          wareRecord.Address = self.Address + 0x310 + (i*4)
+          wareRecord.appendToEntry(dailyPopulationConsumption)
+          wareRecord.Description = wareNames[i]
+    end
+    dailyPopulationConsumption.Collapsed = true
+    dailyPopulationConsumption.appendToEntry(parentRecord)
+end
+
+function Town:createConsumptionDataRecords(parentRecord)
+    local consumptionDataRecord = addressList.createMemoryRecord()
+    consumptionDataRecord.IsGroupHeader = true
+    consumptionDataRecord.Options = "moManualExpandCollapse"
+    consumptionDataRecord.Description = "Consumption Data"
+    for i=0,23 do
+          local wareData0 = addressList.createMemoryRecord()
+          wareData0.Address = self.Address + 0x4f0 + (i*4)
+          wareData0.appendToEntry(consumptionDataRecord)
+          wareData0.Description = wareNames[i].." (weekly)"
+          local wareData4 = addressList.createMemoryRecord()
+          wareData4.Address = self.Address + 0x4f0 + (i*4) + 0x04
+          wareData4.appendToEntry(consumptionDataRecord)
+          wareData4.Description = wareNames[i].." (4)"
+          local wareData8 = addressList.createMemoryRecord()
+          wareData8.Address = self.Address + 0x4f0 + (i*4) + 0x08
+          wareData8.appendToEntry(consumptionDataRecord)
+          wareData8.Description = wareNames[i].." (8)"
+          local wareDataC = addressList.createMemoryRecord()
+          wareDataC.Address = self.Address + 0x4f0 + (i*4) + 0x0C
+          wareDataC.appendToEntry(consumptionDataRecord)
+          wareDataC.Description = wareNames[i].." (C)"
+    end
+    consumptionDataRecord.Collapsed = true
+    consumptionDataRecord.appendToEntry(parentRecord)
+end
+
+Merchant = {}
+Merchant.__index = Merchant
+
+function Merchant:create(address, index)
+    local obj = {}
+    setmetatable(obj, Merchant)
+    obj.Address = address
+    obj.Index = index
+    return obj
+end
+
+function Merchant:createMemoryRecord()
+    local record = addressList.createMemoryRecord()
+    record.IsGroupHeader = true
+    record.Options = "moManualExpandCollapse"
+    record.appendToEntry(merchantsRecord)
+    record.Description = self.Index
+    self:createReputationRecords(record)
+    self:createRankRecords(record)
+
+    local hometownIndexRecord = addressList.createMemoryRecord()
+    hometownIndexRecord.Address = self.Address + 0x19;
+    hometownIndexRecord.Description = "Hometown Index"
+    hometownIndexRecord.Type = vtByte
+    hometownIndexRecord.appendToEntry(record)
+
+    local moneyRecord = addressList.createMemoryRecord()
+    moneyRecord.Address = self.Address + 0x00;
+    moneyRecord.Description = "Money"
+    moneyRecord.appendToEntry(record)
+
+    local companyValueRecord = addressList.createMemoryRecord()
+    companyValueRecord.Address = self.Address + 0x46c;
+    companyValueRecord.Description = "Company Value"
+    companyValueRecord.appendToEntry(record)
+
+    record.Collapsed = true
+end
+
+function Merchant:createReputationRecords(parentRecord)
+    local reputationRecords = addressList.createMemoryRecord()
+    reputationRecords.IsGroupHeader = true
+    reputationRecords.Options = "moManualExpandCollapse"
+    reputationRecords.Description = "Reputation"
+    for i=0,townsCount-1 do
+          local reputationRecord = addressList.createMemoryRecord()
+          reputationRecord.Address = self.Address + 0x2fc + (i*4)
+          reputationRecord.Type = vtSingle
+          reputationRecord.Description = townNames[getTownId(i)]
+          reputationRecord.appendToEntry(reputationRecords)
+    end
+    reputationRecords.Collapsed = true
+    reputationRecords.appendToEntry(parentRecord)
+end
+
+function Merchant:createRankRecords(parentRecord)
+    local rankRecords = addressList.createMemoryRecord()
+    rankRecords.IsGroupHeader = true
+    rankRecords.Options = "moManualExpandCollapse"
+    rankRecords.Description = "Ranks"
+    for i=0,townsCount-1 do
+          local reputationRecord = addressList.createMemoryRecord()
+          reputationRecord.Address = self.Address + 0x39c + i
+          reputationRecord.appendToEntry(rankRecords)
+          reputationRecord.Description = townNames[getTownId(i)]
+          reputationRecord.Type = vtByte
+    end
+    rankRecords.Collapsed = true
+    rankRecords.appendToEntry(parentRecord)
+end
+
+gameWorldAddress = 0x006DE4A0
+addressList = getAddressList()
+
+
+-- GameWorld
+local gameWorldRecord = addressList.createMemoryRecord()
+gameWorldRecord.Description = "GameWorld"
+gameWorldRecord.IsGroupHeader = true
+gameWorldRecord.Options = "moManualExpandCollapse"
+
+local townsCountRecord = addressList.createMemoryRecord()
+townsCountRecord.Description = "townsCount"
+townsCountRecord.Address = gameWorldAddress + 0x10
+townsCountRecord.Type = vtWord
+townsCountRecord.appendToEntry(gameWorldRecord)
+
+gameWorldRecord.Collapsed = true
+
+
+-- Towns
+townsCount = readSmallInteger(gameWorldAddress + 0x10)
+townsRecord = addressList.createMemoryRecord()
+townsAddress = readInteger(gameWorldAddress + 0x68)
+townsRecord.Description = "Towns"
+townsRecord.IsGroupHeader = true
+townsRecord.Options="moManualExpandCollapse"
+
+for i=0,townsCount-1 do
+    local t = Town:create(townsAddress + i*0x9f8, i)
+    t:createMemoryRecord()
+end
+
+townsRecord.Collapsed = true
+
+
+-- Merchants
+merchantsRecord = addressList.createMemoryRecord()
+merchantsAddress = readInteger(gameWorldAddress + 0x78)
+merchantsRecord.Description = "Merchants"
+merchantsRecord.IsGroupHeader = true
+merchantsRecord.Options="moManualExpandCollapse"
+
+local m = Merchant:create(merchantsAddress + 0x24 * 0x650, 0x24)
+m:createMemoryRecord()
+
+merchantsRecord.Collapsed = true
+
+</LuaScript>
+</CheatTable>
