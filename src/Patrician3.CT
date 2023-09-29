@@ -249,6 +249,29 @@ function Town:createMemoryRecord()
     extraTaxTimestamp.Description = "Extra Tax Timestamp"
     extraTaxTimestamp.appendToEntry(record)
 
+    local streetsTotalTimestamp = addressList.createMemoryRecord()
+    streetsTotalTimestamp.Address = self.Address + 0x792;
+    streetsTotalTimestamp.Description = "Streets (total)"
+    streetsTotalTimestamp.Type = vtWord
+    streetsTotalTimestamp.appendToEntry(record)
+
+    local streetsBuiltTimestamp = addressList.createMemoryRecord()
+    streetsBuiltTimestamp.Address = self.Address + 0x790;
+    streetsBuiltTimestamp.Description = "Streets (built)"
+    streetsBuiltTimestamp.Type = vtWord
+    streetsBuiltTimestamp.appendToEntry(record)
+
+    local citizensTotalRecord = addressList.createMemoryRecord()
+    citizensTotalRecord.Address = self.Address + 0x2d4;
+    citizensTotalRecord.Description = "Citizens (total)"
+    citizensTotalRecord.appendToEntry(record)
+
+    local wellsRecord = addressList.createMemoryRecord()
+    wellsRecord.Address = self.Address + 0x789;
+    wellsRecord.Description = "Wells"
+    wellsRecord.Type = vtByte
+    wellsRecord.appendToEntry(record)
+
     record.Collapsed = true
 end
 
@@ -258,10 +281,10 @@ function Town:createWaresRecords(parentRecord)
     waresRecord.Options = "moManualExpandCollapse"
     waresRecord.Description = "Wares"
     for i=0,23 do
-          local wareRecord = addressList.createMemoryRecord()
-          wareRecord.Address = self.Address + 0x04 + (i*4)
-          wareRecord.appendToEntry(waresRecord)
-          wareRecord.Description = wareNames[i]
+        local wareRecord = addressList.createMemoryRecord()
+        wareRecord.Address = self.Address + 0x04 + (i*4)
+        wareRecord.appendToEntry(waresRecord)
+        wareRecord.Description = wareNames[i]
     end
     waresRecord.Collapsed = true
     waresRecord.appendToEntry(parentRecord)
@@ -273,10 +296,10 @@ function Town:createDailyPopulationConsumptionRecords(parentRecord)
     dailyPopulationConsumption.Options = "moManualExpandCollapse"
     dailyPopulationConsumption.Description = "Daily Population Consumption"
     for i=0,23 do
-          local wareRecord = addressList.createMemoryRecord()
-          wareRecord.Address = self.Address + 0x310 + (i*4)
-          wareRecord.appendToEntry(dailyPopulationConsumption)
-          wareRecord.Description = wareNames[i]
+        local wareRecord = addressList.createMemoryRecord()
+        wareRecord.Address = self.Address + 0x310 + (i*4)
+        wareRecord.appendToEntry(dailyPopulationConsumption)
+        wareRecord.Description = wareNames[i]
     end
     dailyPopulationConsumption.Collapsed = true
     dailyPopulationConsumption.appendToEntry(parentRecord)
@@ -288,22 +311,22 @@ function Town:createConsumptionDataRecords(parentRecord)
     consumptionDataRecord.Options = "moManualExpandCollapse"
     consumptionDataRecord.Description = "Consumption Data"
     for i=0,23 do
-          local wareData0 = addressList.createMemoryRecord()
-          wareData0.Address = self.Address + 0x4f0 + (i*4)
-          wareData0.appendToEntry(consumptionDataRecord)
-          wareData0.Description = wareNames[i].." (weekly)"
-          local wareData4 = addressList.createMemoryRecord()
-          wareData4.Address = self.Address + 0x4f0 + (i*4) + 0x04
-          wareData4.appendToEntry(consumptionDataRecord)
-          wareData4.Description = wareNames[i].." (4)"
-          local wareData8 = addressList.createMemoryRecord()
-          wareData8.Address = self.Address + 0x4f0 + (i*4) + 0x08
-          wareData8.appendToEntry(consumptionDataRecord)
-          wareData8.Description = wareNames[i].." (8)"
-          local wareDataC = addressList.createMemoryRecord()
-          wareDataC.Address = self.Address + 0x4f0 + (i*4) + 0x0C
-          wareDataC.appendToEntry(consumptionDataRecord)
-          wareDataC.Description = wareNames[i].." (C)"
+        local wareData0 = addressList.createMemoryRecord()
+        wareData0.Address = self.Address + 0x4f0 + (i*4)
+        wareData0.appendToEntry(consumptionDataRecord)
+        wareData0.Description = wareNames[i].." (weekly)"
+        local wareData4 = addressList.createMemoryRecord()
+        wareData4.Address = self.Address + 0x4f0 + (i*4) + 0x04
+        wareData4.appendToEntry(consumptionDataRecord)
+        wareData4.Description = wareNames[i].." (4)"
+        local wareData8 = addressList.createMemoryRecord()
+        wareData8.Address = self.Address + 0x4f0 + (i*4) + 0x08
+        wareData8.appendToEntry(consumptionDataRecord)
+        wareData8.Description = wareNames[i].." (8)"
+        local wareDataC = addressList.createMemoryRecord()
+        wareDataC.Address = self.Address + 0x4f0 + (i*4) + 0x0C
+        wareDataC.appendToEntry(consumptionDataRecord)
+        wareDataC.Description = wareNames[i].." (C)"
     end
     consumptionDataRecord.Collapsed = true
     consumptionDataRecord.appendToEntry(parentRecord)
@@ -328,12 +351,27 @@ function Merchant:createMemoryRecord()
     record.Description = self.Index
     self:createReputationRecords(record)
     self:createRankRecords(record)
+    self:createOfficeRecords(record)
 
     local hometownIndexRecord = addressList.createMemoryRecord()
     hometownIndexRecord.Address = self.Address + 0x19;
     hometownIndexRecord.Description = "Hometown Index"
     hometownIndexRecord.Type = vtByte
     hometownIndexRecord.appendToEntry(record)
+
+    local nameRecord = addressList.createMemoryRecord()
+    nameRecord.Address = string.format("+%X", readInteger(self.Address + 0xe8))
+    nameRecord.Description = "Name"
+    nameRecord.Type = vtString
+    nameRecord.String.Size = 10
+    nameRecord.appendToEntry(record)
+
+    local familyNameRecord = addressList.createMemoryRecord()
+    familyNameRecord.Address = string.format("[%X]", self.Address + 0xe4)
+    familyNameRecord.Description = "Family Name"
+    familyNameRecord.Type = vtString
+    familyNameRecord.String.Size = 10
+    familyNameRecord.appendToEntry(record)
 
     local moneyRecord = addressList.createMemoryRecord()
     moneyRecord.Address = self.Address + 0x00;
@@ -345,6 +383,41 @@ function Merchant:createMemoryRecord()
     companyValueRecord.Description = "Company Value"
     companyValueRecord.appendToEntry(record)
 
+    local companyCapacityRecord = addressList.createMemoryRecord()
+    companyCapacityRecord.Address = self.Address + 0x470;
+    companyCapacityRecord.Description = "Company Capacity"
+    companyCapacityRecord.appendToEntry(record)
+
+    local _1eRecord = addressList.createMemoryRecord()
+    _1eRecord.Address = self.Address + 0x1e;
+    _1eRecord.Description = "1e"
+    _1eRecord.Type = vtByte
+    _1eRecord.appendToEntry(record)
+
+    local _31Record = addressList.createMemoryRecord()
+    _31Record.Address = self.Address + 0x31;
+    _31Record.Description = "Spouse Hometown Index (" .. townNames[getTownId(readByte(self.Address + 0x31))] .. ")"
+    _31Record.Type = vtByte
+    _31Record.appendToEntry(record)
+
+    local _32Record = addressList.createMemoryRecord()
+    _32Record.Address = self.Address + 0x32;
+    _32Record.Description = "Spouse Reputation Bonus"
+    _32Record.Type = vtByte
+    _32Record.appendToEntry(record)
+
+    local _8Record = addressList.createMemoryRecord()
+    _8Record.Address = self.Address + 0x08;
+    _8Record.Description = "8"
+    _8Record.Type = vtWord
+    _8Record.appendToEntry(record)
+
+    local baseRepFactorRecord = addressList.createMemoryRecord()
+    baseRepFactorRecord.Address = self.Address + 0x464;
+    baseRepFactorRecord.Description = "baseRepFactorRecord"
+    baseRepFactorRecord.Type = vtSingle
+    baseRepFactorRecord.appendToEntry(record)
+
     record.Collapsed = true
 end
 
@@ -352,13 +425,31 @@ function Merchant:createReputationRecords(parentRecord)
     local reputationRecords = addressList.createMemoryRecord()
     reputationRecords.IsGroupHeader = true
     reputationRecords.Options = "moManualExpandCollapse"
-    reputationRecords.Description = "Reputation"
+    reputationRecords.Description = "Reputations"
     for i=0,townsCount-1 do
-          local reputationRecord = addressList.createMemoryRecord()
-          reputationRecord.Address = self.Address + 0x2fc + (i*4)
-          reputationRecord.Type = vtSingle
-          reputationRecord.Description = townNames[getTownId(i)]
-          reputationRecord.appendToEntry(reputationRecords)
+        local reputationRecord = addressList.createMemoryRecord()
+        reputationRecord.Address = self.Address + 0x2fc + (i*4)
+        reputationRecord.Type = vtSingle
+        reputationRecord.Description = townNames[getTownId(i)]
+        reputationRecord.appendToEntry(reputationRecords)
+
+        local _11cField0 = addressList.createMemoryRecord()
+        _11cField0.Address = self.Address + 0x11c + (i*3*4)
+        _11cField0.Type = vtSingle
+        _11cField0.Description = "Buildings"
+        _11cField0.appendToEntry(reputationRecord)
+
+        local _11cField4 = addressList.createMemoryRecord()
+        _11cField4.Address = self.Address + 0x11c + 0x04 + (i*3*4)
+        _11cField4.Type = vtSingle
+        _11cField4.Description = "Donations"
+        _11cField4.appendToEntry(reputationRecord)
+
+        local _11cField8 = addressList.createMemoryRecord()
+        _11cField8.Address = self.Address + 0x11c + 0x08 + (i*3*4)
+        _11cField8.Type = vtSingle
+        _11cField8.Description = "Trading"
+        _11cField8.appendToEntry(reputationRecord)
     end
     reputationRecords.Collapsed = true
     reputationRecords.appendToEntry(parentRecord)
@@ -370,14 +461,94 @@ function Merchant:createRankRecords(parentRecord)
     rankRecords.Options = "moManualExpandCollapse"
     rankRecords.Description = "Ranks"
     for i=0,townsCount-1 do
-          local reputationRecord = addressList.createMemoryRecord()
-          reputationRecord.Address = self.Address + 0x39c + i
-          reputationRecord.appendToEntry(rankRecords)
-          reputationRecord.Description = townNames[getTownId(i)]
-          reputationRecord.Type = vtByte
+        local reputationRecord = addressList.createMemoryRecord()
+        reputationRecord.Address = self.Address + 0x39c + i
+        reputationRecord.appendToEntry(rankRecords)
+        reputationRecord.Description = townNames[getTownId(i)]
+        reputationRecord.Type = vtByte
     end
     rankRecords.Collapsed = true
     rankRecords.appendToEntry(parentRecord)
+end
+
+function Merchant:createOfficeRecords(parentRecord)
+    local officeRecords = addressList.createMemoryRecord()
+    officeRecords.IsGroupHeader = true
+    officeRecords.Options = "moManualExpandCollapse"
+    officeRecords.Description = "Offices"
+    local officeIndex = readSmallInteger(self.Address + 0x0c)
+    while officeIndex &lt; officesCount do
+        local office = Office:create(officesAddress + officeIndex * 0x44c, officeIndex)
+        office:createMemoryRecord(officeRecords)
+        officeIndex = office:getNextOfficeOfMerchantIndex()
+    end
+    officeRecords.Collapsed = true
+    officeRecords.appendToEntry(parentRecord)
+end
+
+Office = {}
+Office.__index = Office
+
+function Office:create(address, index)
+    local obj = {}
+    setmetatable(obj, Office)
+    obj.Address = address
+    obj.Index = index
+    return obj
+end
+
+function Office:getTownIndex()
+    return readSmallInteger(self.Address + 0x2c6)
+end
+
+function Office:getNextOfficeOfMerchantIndex()
+    return readSmallInteger(self.Address + 0x2c8)
+end
+
+function Office:createMemoryRecord(parentRecord)
+    local record = addressList.createMemoryRecord()
+    record.IsGroupHeader = true
+    record.Options = "moManualExpandCollapse"
+    record.Description = townNames[getTownId(self:getTownIndex())]
+
+    local _2e4RichRecord = addressList.createMemoryRecord()
+    _2e4RichRecord.Address = self.Address + 0x2e4 + 0x00;
+    _2e4RichRecord.Description = "Rent Rich"
+    _2e4RichRecord.Type = vtByte
+    _2e4RichRecord.appendToEntry(record)
+
+    local _2e4WealthyRecord = addressList.createMemoryRecord()
+    _2e4WealthyRecord.Address = self.Address + 0x2e4 + 0x01;
+    _2e4WealthyRecord.Description = "Rent Wealthy"
+    _2e4WealthyRecord.Type = vtByte
+    _2e4WealthyRecord.appendToEntry(record)
+
+    local _2e4PoorRecord = addressList.createMemoryRecord()
+    _2e4PoorRecord.Address = self.Address + 0x2e4 + 0x02;
+    _2e4PoorRecord.Description = "Rent Poor"
+    _2e4PoorRecord.Type = vtByte
+    _2e4PoorRecord.appendToEntry(record)
+
+    local _2deRichRecord = addressList.createMemoryRecord()
+    _2deRichRecord.Address = self.Address + 0x2de + (0x00 * 2);
+    _2deRichRecord.Description = "Tenants Rich"
+    _2deRichRecord.Type = vtWord
+    _2deRichRecord.appendToEntry(record)
+
+    local _2deWealthyRecord = addressList.createMemoryRecord()
+    _2deWealthyRecord.Address = self.Address + 0x2de + (0x01 * 2);
+    _2deWealthyRecord.Description = "Tenants Wealthy"
+    _2deWealthyRecord.Type = vtWord
+    _2deWealthyRecord.appendToEntry(record)
+
+    local _2dePoorRecord = addressList.createMemoryRecord()
+    _2dePoorRecord.Address = self.Address + 0x2de + (0x02 * 2);
+    _2dePoorRecord.Description = "Tenants Poor"
+    _2dePoorRecord.Type = vtWord
+    _2dePoorRecord.appendToEntry(record)
+
+    record.Collapsed = true
+    record.appendToEntry(parentRecord)
 end
 
 gameWorldAddress = 0x006DE4A0
@@ -391,10 +562,16 @@ gameWorldRecord.IsGroupHeader = true
 gameWorldRecord.Options = "moManualExpandCollapse"
 
 local townsCountRecord = addressList.createMemoryRecord()
-townsCountRecord.Description = "townsCount"
+townsCountRecord.Description = "Towns"
 townsCountRecord.Address = gameWorldAddress + 0x10
 townsCountRecord.Type = vtWord
 townsCountRecord.appendToEntry(gameWorldRecord)
+
+local domRecord = addressList.createMemoryRecord()
+domRecord.Description = "Day of Month"
+domRecord.Address = gameWorldAddress + 0x00
+domRecord.Type = vtByte
+domRecord.appendToEntry(gameWorldRecord)
 
 gameWorldRecord.Collapsed = true
 
@@ -406,6 +583,11 @@ townsAddress = readInteger(gameWorldAddress + 0x68)
 townsRecord.Description = "Towns"
 townsRecord.IsGroupHeader = true
 townsRecord.Options="moManualExpandCollapse"
+
+
+-- Offices
+officesCount = readSmallInteger(gameWorldAddress + 0x08)
+officesAddress = readInteger(gameWorldAddress + 0x74)
 
 for i=0,townsCount-1 do
     local t = Town:create(townsAddress + i*0x9f8, i)
