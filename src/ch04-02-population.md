@@ -32,6 +32,8 @@ At `0x00672860` there is a table that contains the daily consumptions for 100 ci
 |Crossbow|0|0|0|0|
 |Carbine|0|0|0|0|
 
+If a town is not under siege and a ware is in oversupply, more of it is consumed.
+
 ## Satisfaction
 P3's setting "Needs of the citizens" changes how easy it is to increase the satisfaction, and how fast it changes.
 The *satisfaction classes* are displayed in-game: *Very happy*, *happy*, *very satisfied*, *satisfied*, *dissatisfied*, and *annoyed*.
@@ -40,11 +42,11 @@ The function `prepare_citizens_menu_ui` at `0x0040B570` calculates the satisfact
 
 |Satisfaction >|Satisfaction Class|
 |-|-|
-|29,5|Very Happy|
-|19,5|Happy|
-|9,5|Very Satisfied|
-|0,5|Satisfied|
-|-10,5|Dissatisfied|
+|29.5|Very Happy|
+|19.5|Happy|
+|9.5|Very Satisfied|
+|0.5|Satisfied|
+|-10.5|Dissatisfied|
 |-Infinity|Annoyed|
 
 The function `update_citizen_satisfaction` at `0x0051C830` calculates the *current satisfaction* each population type would have.
@@ -123,4 +125,3 @@ current_satisfaction = 2 * (
     + ware_satisfactions
 )
 ```
-
