@@ -10,7 +10,7 @@ reputation = min(0,
     + capacity_rep
     + company_value_rep
     + spouse_rep # only in hometown
-    + local_donations_rep
+    + local_social_rep
     + local_trading_rep
     + local_buildings_rep
 )
@@ -60,16 +60,59 @@ company_value_rep = min(5.0, company_value / 100_000.0)
 Every spouse has a fixed reputation factor.
 TODO list options
 
-## Donations
-`local_donations_rep` is the merchant's donation reputation in the town.
-The donations reputation increases through the following actions:
-- Feeding the poor
-- Donations (Church)
-- Church extension donations
-- Granting low interest loans
+## Social
+`local_social_rep` is the merchant's social reputation in the town.
+It is changed through by many actions, and degrades over time.
 
-It decreases through the following actions:
-- Bad celebrations
+### Recurring Constants
+The following values appear in multiple calculations, and appear to have fixed values.
+
+|Name|Value|Location|
+|-|-|-|
+|base_rep_factor|1.0|Merchant|
+|church_factor|0.0|GameWorld|
+
+### Loans
+When granting a loan, `local_social_rep` is increased as follows:
+```
+local_social_rep += amount / 80_000.0 * interest_factor * base_rep_factor
+```
+`interest_factor` depends on the chosen interest rate:
+
+|Interest|Factor|
+|-|-|
+|Very Low|4.0|
+|Low|3.0|
+|Normal|2.0|
+|High|1.0|
+|Very High|0.0|
+
+### Church Donations
+Donations to the church influence the local social reputation as follows:
+```
+money_capacity = 12_000 * (church_factor + 1)
+effective_amount = min(amount, church_money_capacity - church_money)
+local_social_rep += effective_amount
+    * 0.0003
+    / (church_factor + 1)
+    * base_rep_factor
+```
+
+### Church Extension Donation
+Donations to the church extension influence the local social reputation as follows:
+```
+effective_amount = min(amount, church_extension_cost - church_extension_money)
+local_social_rep += effective_amount
+    * 0.0003
+    / (church_factor + 1)
+    * base_rep_factor
+```
+
+### Feeding the Poor
+
+### Celebrations
+
+### Degradation
 
 ## Trading
 TODO
