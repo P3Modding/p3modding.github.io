@@ -109,6 +109,11 @@ local_social_rep += effective_amount
 ```
 
 ### Feeding the Poor
+Food donations unfluence the local social reputation as follows:
+```
+for amount, ware_id in donation:
+    local_social_rep += get_sell_price(ware_id, town_index, amount)
+```
 
 ### Celebrations
 
