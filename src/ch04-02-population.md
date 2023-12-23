@@ -33,6 +33,7 @@ At `0x00672860` there is a table that contains the daily consumptions for 100 ci
 |Carbine|0|0|0|0|
 
 If a town is not under siege and a ware is in oversupply, more of it is consumed.
+**TODO pitch consumption (sieged and unsieged), winter/famine/plague modifiers**
 
 ## Satisfaction
 P3's setting "Needs of the citizens" changes how easy it is to increase the satisfaction, and how fast it changes.

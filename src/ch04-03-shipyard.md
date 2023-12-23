@@ -69,6 +69,7 @@ def structure_markup(structure):
 price = base_price
     + structure_markup(structure_base_value)
     + utilization_markup
+    + resource_prices
 ```
 
 ## Repairs

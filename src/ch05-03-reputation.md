@@ -115,6 +115,8 @@ for amount, ware_id in donation:
     local_social_rep += get_sell_price(ware_id, town_index, amount)
 ```
 
+### Town Coffers Access
+
 ### Celebrations
 
 ### Degradation
