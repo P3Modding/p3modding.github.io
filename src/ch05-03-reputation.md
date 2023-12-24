@@ -109,10 +109,14 @@ local_social_rep += effective_amount
 ```
 
 ### Feeding the Poor
-Food donations unfluence the local social reputation as follows:
+The `handle_feeding_the_poor` function is at `0x004FE557`.
+Food donations influence the local social reputation as follows:
 ```
 for amount, ware_id in donation:
     local_social_rep += get_sell_price(ware_id, town_index, amount)
+        * 0.0003
+        / (church_factor + 1)
+        * base_rep_factor
 ```
 
 ### Town Coffers Access
