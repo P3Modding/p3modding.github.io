@@ -123,6 +123,24 @@ for amount, ware_id in donation:
 
 ### Celebrations
 
+### Crime
+The `handle_crime_social_reputation_impact` function at `0x004F8F10` reduces the merchant's social reputation according to the following table:
+
+|Crime Type|Impact|
+|-|-|
+|0x2|-1.0|
+|0x0|-2.0|
+|0x9|-2.0|
+|0xa|-2.0|
+|0xd|-2.0|
+|0x1|-4.0|
+|0xb|-4.0|
+|0x3|-6.0|
+|0x4|-6.0|
+|0xc|-6.0|
+|0xe|-6.0|
+|0xf|-8.0|
+
 ### Degradation
 
 ## Trading
