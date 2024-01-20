@@ -57,7 +57,7 @@ company_value_rep = min(5.0, company_value / 100_000.0)
 ```
 
 ## Spouse
-Every spouse has a fixed reputation factor.
+Every spouse has a fixed reputation bonus.
 TODO list options
 
 ## Social
@@ -118,6 +118,7 @@ for amount, ware_id in donation:
         / (church_factor + 1)
         * base_rep_factor
 ```
+TODO: minimum wares threshold?
 
 ### Town Coffers Access
 

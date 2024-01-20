@@ -1,129 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <CheatTable CheatEngineTableVersion="45">
-  <Forms>
-    <UDF1 Class="TCEForm" Encoding="Ascii85">O@=wEf/O;OC*YHrzM{WY^vcPSK+*!!o,}F@P+;I:]iUUuJA+!/Op%zU%Y{2#ya7PO.ldU=2$e3)ogcbpgcoAZfwe{NX2fPD6RKi(7#=Io88e5_*tTfKxhhGk,.)@n$)lTMb8UXCNUGBMktRHsSW=d!x4FmoSj*5(vcNdrum=C1kM@kR24FAe%]LzYJ@pW}m3%:bX}d1A.kAlJ.%o=uu7Z(]p0,wcZG7K[4+</UDF1>
-  </Forms>
   <CheatEntries/>
   <UserdefinedSymbols/>
-  <Structures StructVersion="2">
-    <Structure Name="Town" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
-      <Elements>
-        <Element Offset="0" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000000" DisplayMethod="unsigned integer"/>
-        <Element Offset="4" Vartype="4 Bytes" Bytesize="4" RLECount="19" OffsetHex="00000004" DisplayMethod="signed integer"/>
-        <Element Offset="80" Vartype="Pointer" Bytesize="4" OffsetHex="00000050" DisplayMethod="unsigned integer">
-          <Structure Name="Autocreated from 00018A8D" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
-            <Elements>
-              <Element Offset="0" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="00000000" DisplayMethod="unsigned integer"/>
-              <Element Offset="3" Vartype="4 Bytes" Bytesize="4" RLECount="1023" OffsetHex="00000003" DisplayMethod="unsigned integer"/>
-              <Element Offset="4095" Vartype="Byte" Bytesize="1" OffsetHex="00000FFF" DisplayMethod="unsigned integer"/>
-            </Elements>
-          </Structure>
-        </Element>
-        <Element Offset="84" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000054" DisplayMethod="unsigned integer"/>
-        <Element Offset="88" Vartype="Pointer" Bytesize="4" OffsetHex="00000058" DisplayMethod="unsigned integer"/>
-        <Element Offset="92" Vartype="4 Bytes" Bytesize="4" OffsetHex="0000005C" DisplayMethod="unsigned integer"/>
-        <Element Offset="96" Vartype="Byte" Bytesize="1" OffsetHex="00000060" DisplayMethod="unsigned integer"/>
-        <Element Offset="97" Vartype="String" Bytesize="4" OffsetHex="00000061" DisplayMethod="unsigned integer"/>
-        <Element Offset="101" Vartype="Byte" Bytesize="1" RLECount="4" OffsetHex="00000065" DisplayMethod="unsigned integer"/>
-        <Element Offset="105" Vartype="String" Bytesize="4" OffsetHex="00000069" DisplayMethod="unsigned integer"/>
-        <Element Offset="109" Vartype="Byte" Bytesize="1" RLECount="8" OffsetHex="0000006D" DisplayMethod="unsigned integer"/>
-        <Element Offset="117" Vartype="String" Bytesize="4" OffsetHex="00000075" DisplayMethod="unsigned integer"/>
-        <Element Offset="121" Vartype="Byte" Bytesize="1" RLECount="12" OffsetHex="00000079" DisplayMethod="unsigned integer"/>
-        <Element Offset="133" Vartype="String" Bytesize="7" OffsetHex="00000085" DisplayMethod="unsigned integer"/>
-        <Element Offset="140" Vartype="Pointer" Bytesize="4" OffsetHex="0000008C" DisplayMethod="unsigned integer"/>
-        <Element Offset="144" Vartype="Byte" Bytesize="1" RLECount="5" OffsetHex="00000090" DisplayMethod="unsigned integer"/>
-        <Element Offset="149" Vartype="String" Bytesize="7" OffsetHex="00000095" DisplayMethod="unsigned integer"/>
-        <Element Offset="156" Vartype="Byte" Bytesize="1" RLECount="4" OffsetHex="0000009C" DisplayMethod="unsigned integer"/>
-        <Element Offset="160" Vartype="Pointer" Bytesize="4" OffsetHex="000000A0" DisplayMethod="unsigned integer"/>
-        <Element Offset="164" Vartype="String" Bytesize="4" OffsetHex="000000A4" DisplayMethod="unsigned integer"/>
-        <Element Offset="168" Vartype="Byte" Bytesize="1" OffsetHex="000000A8" DisplayMethod="unsigned integer"/>
-        <Element Offset="169" Vartype="String" Bytesize="7" OffsetHex="000000A9" DisplayMethod="unsigned integer"/>
-        <Element Offset="176" Vartype="Byte" Bytesize="1" OffsetHex="000000B0" DisplayMethod="unsigned integer"/>
-        <Element Offset="177" Vartype="String" Bytesize="11" OffsetHex="000000B1" DisplayMethod="unsigned integer"/>
-        <Element Offset="188" Vartype="Byte" Bytesize="1" RLECount="5" OffsetHex="000000BC" DisplayMethod="unsigned integer"/>
-        <Element Offset="193" Vartype="String" Bytesize="8" OffsetHex="000000C1" DisplayMethod="unsigned integer"/>
-        <Element Offset="201" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="000000C9" DisplayMethod="unsigned integer"/>
-        <Element Offset="204" Vartype="Pointer" Bytesize="4" RLECount="130" OffsetHex="000000CC" DisplayMethod="unsigned integer"/>
-        <Element Offset="724" Vartype="4 Bytes" Bytesize="4" OffsetHex="000002D4" DisplayMethod="unsigned integer"/>
-        <Element Offset="728" Vartype="Pointer" Bytesize="4" RLECount="3" OffsetHex="000002D8" DisplayMethod="unsigned integer"/>
-        <Element Offset="740" Vartype="4 Bytes" Bytesize="4" OffsetHex="000002E4" DisplayMethod="unsigned integer"/>
-        <Element Offset="744" Vartype="Pointer" Bytesize="4" OffsetHex="000002E8" DisplayMethod="unsigned integer"/>
-        <Element Offset="748" Vartype="4 Bytes" Bytesize="4" OffsetHex="000002EC" DisplayMethod="unsigned integer"/>
-        <Element Offset="752" Vartype="Pointer" Bytesize="4" RLECount="18" OffsetHex="000002F0" DisplayMethod="unsigned integer"/>
-        <Element Offset="824" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000338" DisplayMethod="unsigned integer"/>
-        <Element Offset="828" Vartype="Pointer" Bytesize="4" RLECount="132" OffsetHex="0000033C" DisplayMethod="unsigned integer"/>
-        <Element Offset="1356" Vartype="4 Bytes" Bytesize="4" OffsetHex="0000054C" DisplayMethod="unsigned integer"/>
-        <Element Offset="1360" Vartype="Pointer" Bytesize="4" RLECount="6" OffsetHex="00000550" DisplayMethod="unsigned integer"/>
-        <Element Offset="1384" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000568" DisplayMethod="unsigned integer"/>
-        <Element Offset="1388" Vartype="Pointer" Bytesize="4" RLECount="2" OffsetHex="0000056C" DisplayMethod="unsigned integer"/>
-        <Element Offset="1396" Vartype="Byte" Bytesize="1" RLECount="4" OffsetHex="00000574" DisplayMethod="unsigned integer"/>
-        <Element Offset="1400" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000578" DisplayMethod="unsigned integer"/>
-        <Element Offset="1404" Vartype="Pointer" Bytesize="4" RLECount="3" OffsetHex="0000057C" DisplayMethod="unsigned integer"/>
-        <Element Offset="1416" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000588" DisplayMethod="unsigned integer"/>
-        <Element Offset="1420" Vartype="Pointer" Bytesize="4" OffsetHex="0000058C" DisplayMethod="unsigned integer"/>
-        <Element Offset="1424" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000590" DisplayMethod="unsigned integer"/>
-        <Element Offset="1428" Vartype="Pointer" Bytesize="4" RLECount="43" OffsetHex="00000594" DisplayMethod="unsigned integer"/>
-        <Element Offset="1600" Vartype="4 Bytes" Bytesize="4" RLECount="6" OffsetHex="00000640" DisplayMethod="unsigned integer"/>
-        <Element Offset="1624" Vartype="Pointer" Bytesize="4" RLECount="89" OffsetHex="00000658" DisplayMethod="unsigned integer"/>
-        <Element Offset="1980" Vartype="4 Bytes" Bytesize="4" OffsetHex="000007BC" DisplayMethod="unsigned integer"/>
-        <Element Offset="1984" Vartype="Double" Bytesize="8" RLECount="3" OffsetHex="000007C0" DisplayMethod="unsigned integer"/>
-        <Element Offset="2008" Vartype="4 Bytes" Bytesize="4" OffsetHex="000007D8" DisplayMethod="unsigned integer"/>
-        <Element Offset="2012" Vartype="Pointer" Bytesize="4" OffsetHex="000007DC" DisplayMethod="unsigned integer"/>
-        <Element Offset="2016" Vartype="4 Bytes" Bytesize="4" OffsetHex="000007E0" DisplayMethod="unsigned integer"/>
-        <Element Offset="2020" Vartype="Pointer" Bytesize="4" OffsetHex="000007E4" DisplayMethod="unsigned integer"/>
-        <Element Offset="2024" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="000007E8" DisplayMethod="unsigned integer"/>
-        <Element Offset="2032" Vartype="Pointer" Bytesize="4" RLECount="74" OffsetHex="000007F0" DisplayMethod="unsigned integer"/>
-        <Element Offset="2328" Vartype="Float" Bytesize="4" RLECount="2" OffsetHex="00000918" DisplayMethod="unsigned integer"/>
-        <Element Offset="2336" Vartype="4 Bytes" Bytesize="4" RLECount="7" OffsetHex="00000920" DisplayMethod="unsigned integer"/>
-        <Element Offset="2364" Vartype="Pointer" Bytesize="4" OffsetHex="0000093C" DisplayMethod="unsigned integer"/>
-        <Element Offset="2368" Vartype="4 Bytes" Bytesize="4" RLECount="5" OffsetHex="00000940" DisplayMethod="unsigned integer"/>
-        <Element Offset="2388" Vartype="Pointer" Bytesize="4" OffsetHex="00000954" DisplayMethod="unsigned integer"/>
-        <Element Offset="2392" Vartype="4 Bytes" Bytesize="4" RLECount="5" OffsetHex="00000958" DisplayMethod="unsigned integer"/>
-        <Element Offset="2412" Vartype="Pointer" Bytesize="4" OffsetHex="0000096C" DisplayMethod="unsigned integer"/>
-        <Element Offset="2416" Vartype="4 Bytes" Bytesize="4" RLECount="6" OffsetHex="00000970" DisplayMethod="unsigned integer"/>
-        <Element Offset="2440" Vartype="Pointer" Bytesize="4" RLECount="28" OffsetHex="00000988" DisplayMethod="unsigned integer"/>
-      </Elements>
-    </Structure>
-    <Structure Name="GameWorld" AutoFill="0" AutoCreate="1" DefaultHex="0" AutoDestroy="0" DoNotSaveLocal="0" RLECompression="1" AutoCreateStructsize="4096">
-      <Elements>
-        <Element Offset="0" Vartype="4 Bytes" Bytesize="4" RLECount="4" OffsetHex="00000000" DisplayMethod="hexadecimal"/>
-        <Element Offset="16" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000010" DisplayMethod="unsigned integer"/>
-        <Element Offset="20" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000014" DisplayMethod="hexadecimal"/>
-        <Element Offset="24" Vartype="Pointer" Bytesize="4" OffsetHex="00000018" DisplayMethod="unsigned integer"/>
-        <Element Offset="28" Vartype="4 Bytes" Bytesize="4" OffsetHex="0000001C" DisplayMethod="hexadecimal"/>
-        <Element Offset="32" Vartype="Pointer" Bytesize="4" OffsetHex="00000020" DisplayMethod="unsigned integer"/>
-        <Element Offset="36" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000024" DisplayMethod="hexadecimal"/>
-        <Element Offset="44" Vartype="String" Bytesize="5" OffsetHex="0000002C" DisplayMethod="unsigned integer"/>
-        <Element Offset="49" Vartype="Byte" Bytesize="1" RLECount="3" OffsetHex="00000031" DisplayMethod="unsigned integer"/>
-        <Element Offset="52" Vartype="4 Bytes" Bytesize="4" RLECount="3" OffsetHex="00000034" DisplayMethod="unsigned integer"/>
-        <Element Offset="64" Vartype="4 Bytes" Bytesize="4" RLECount="4" OffsetHex="00000040" DisplayMethod="hexadecimal"/>
-        <Element Offset="80" Vartype="Pointer" Bytesize="4" RLECount="2" OffsetHex="00000050" DisplayMethod="unsigned integer"/>
-        <Element Offset="88" Vartype="4 Bytes" Bytesize="4" RLECount="4" OffsetHex="00000058" DisplayMethod="unsigned integer"/>
-        <Element Offset="104" Vartype="Pointer" Bytesize="4" OffsetHex="00000068" ChildStruct="Town" Description="towns" DisplayMethod="unsigned integer"/>
-        <Element Offset="108" Vartype="Pointer" Bytesize="4" RLECount="5" OffsetHex="0000006C" DisplayMethod="unsigned integer"/>
-        <Element Offset="128" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000080" DisplayMethod="unsigned integer"/>
-        <Element Offset="136" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000088" DisplayMethod="hexadecimal"/>
-        <Element Offset="140" Vartype="Pointer" Bytesize="4" OffsetHex="0000008C" DisplayMethod="unsigned integer"/>
-        <Element Offset="144" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="00000090" DisplayMethod="hexadecimal"/>
-        <Element Offset="152" Vartype="4 Bytes" Bytesize="4" OffsetHex="00000098" DisplayMethod="unsigned integer"/>
-        <Element Offset="156" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="0000009C" DisplayMethod="hexadecimal"/>
-        <Element Offset="164" Vartype="4 Bytes" Bytesize="4" OffsetHex="000000A4" DisplayMethod="unsigned integer"/>
-        <Element Offset="168" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="000000A8" DisplayMethod="hexadecimal"/>
-        <Element Offset="176" Vartype="4 Bytes" Bytesize="4" OffsetHex="000000B0" DisplayMethod="unsigned integer"/>
-        <Element Offset="180" Vartype="4 Bytes" Bytesize="4" OffsetHex="000000B4" DisplayMethod="hexadecimal"/>
-        <Element Offset="184" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="000000B8" DisplayMethod="unsigned integer"/>
-        <Element Offset="192" Vartype="Pointer" Bytesize="4" OffsetHex="000000C0" DisplayMethod="unsigned integer"/>
-        <Element Offset="196" Vartype="4 Bytes" Bytesize="4" OffsetHex="000000C4" DisplayMethod="hexadecimal"/>
-        <Element Offset="200" Vartype="4 Bytes" Bytesize="4" OffsetHex="000000C8" DisplayMethod="unsigned integer"/>
-        <Element Offset="204" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="000000CC" DisplayMethod="hexadecimal"/>
-        <Element Offset="212" Vartype="4 Bytes" Bytesize="4" OffsetHex="000000D4" DisplayMethod="unsigned integer"/>
-        <Element Offset="216" Vartype="Pointer" Bytesize="4" OffsetHex="000000D8" DisplayMethod="unsigned integer"/>
-        <Element Offset="220" Vartype="4 Bytes" Bytesize="4" OffsetHex="000000DC" DisplayMethod="hexadecimal"/>
-        <Element Offset="224" Vartype="4 Bytes" Bytesize="4" RLECount="2" OffsetHex="000000E0" DisplayMethod="unsigned integer"/>
-        <Element Offset="232" Vartype="Pointer" Bytesize="4" OffsetHex="000000E8" DisplayMethod="unsigned integer"/>
-      </Elements>
-    </Structure>
-  </Structures>
   <LuaScript>wareNames =
 {
  [0x00] = "Grain",
@@ -225,6 +103,7 @@ function Town:createMemoryRecord()
     self:createWaresRecords(record)
     self:createDailyPopulationConsumptionRecords(record)
     self:createConsumptionDataRecords(record)
+    Church:create(self.Address + 0x794):createChurchRecords(record)
 
     local famineCounterRecord = addressList.createMemoryRecord()
     famineCounterRecord.Address = self.Address + 0x2c3;
@@ -271,6 +150,19 @@ function Town:createMemoryRecord()
     wellsRecord.Description = "Wells"
     wellsRecord.Type = vtByte
     wellsRecord.appendToEntry(record)
+
+    local desiredWareRecord = addressList.createMemoryRecord()
+    desiredWareRecord.Address = self.Address + 0x6f0;
+    desiredWareRecord.Description = "Bonus Ware Id"
+    desiredWareRecord.Type = vtByte
+    desiredWareRecord.appendToEntry(record)
+
+    local accusedMerchantRecord = addressList.createMemoryRecord()
+    accusedMerchantRecord.Address = self.Address + 0x83d;
+    accusedMerchantRecord.Description = "Accused Merchant"
+    accusedMerchantRecord.Type = vtByte
+    accusedMerchantRecord.ShowAsHex = true
+    accusedMerchantRecord.appendToEntry(record)
 
     record.Collapsed = true
 end
@@ -376,6 +268,7 @@ function Merchant:createMemoryRecord()
     local moneyRecord = addressList.createMemoryRecord()
     moneyRecord.Address = self.Address + 0x00;
     moneyRecord.Description = "Money"
+    moneyRecord.ShowAsSigned = true
     moneyRecord.appendToEntry(record)
 
     local companyValueRecord = addressList.createMemoryRecord()
@@ -396,7 +289,7 @@ function Merchant:createMemoryRecord()
 
     local _31Record = addressList.createMemoryRecord()
     _31Record.Address = self.Address + 0x31;
-    _31Record.Description = "Spouse Hometown Index (" .. townNames[getTownId(readByte(self.Address + 0x31))] .. ")"
+    _31Record.Description = "Spouse Hometown Index" -- .. townNames[getTownId(readByte(self.Address + 0x31))] .. ")"
     _31Record.Type = vtByte
     _31Record.appendToEntry(record)
 
@@ -551,6 +444,114 @@ function Office:createMemoryRecord(parentRecord)
     record.appendToEntry(parentRecord)
 end
 
+Church = {}
+Church.__index = Church
+
+function Church:create(address)
+    local obj = {}
+    setmetatable(obj, Church)
+    obj.Address = address
+    return obj
+end
+
+function Church:createChurchRecords(parentRecord)
+    local churchRecord = addressList.createMemoryRecord()
+    churchRecord.IsGroupHeader = true
+    churchRecord.Options = "moManualExpandCollapse"
+    churchRecord.Description = "Church"
+
+    local donationsRecord = addressList.createMemoryRecord()
+    donationsRecord.Address = self.Address + 0x00
+    donationsRecord.Description = "Social"
+    donationsRecord.appendToEntry(churchRecord)
+
+    local extensionDonationsRecord = addressList.createMemoryRecord()
+    extensionDonationsRecord.Address = self.Address + 0x04
+    extensionDonationsRecord.Description = "Extension Donations"
+    extensionDonationsRecord.appendToEntry(churchRecord)
+
+    local _8Record = addressList.createMemoryRecord()
+    _8Record.Address = self.Address + 0x08
+    _8Record.Description = "_8Record"
+    _8Record.appendToEntry(churchRecord)
+
+    local extensionLevelRecord = addressList.createMemoryRecord()
+    extensionLevelRecord.Address = self.Address + 0x0f
+    extensionLevelRecord.Description = "Extension Level"
+    extensionLevelRecord.Type = vtByte
+    extensionLevelRecord.appendToEntry(churchRecord)
+
+    churchRecord.Collapsed = true
+    churchRecord.appendToEntry(parentRecord)
+end
+
+Class5 = {}
+Class5.__index = Class5
+
+function Class5:create(address)
+    local obj = {}
+    setmetatable(obj, Class5)
+    obj.Address = address
+    return obj
+end
+
+function Class5:createMemoryRecord(parentRecord)
+    local class5Record = addressList.createMemoryRecord()
+    class5Record.IsGroupHeader = true
+    class5Record.Options = "moManualExpandCollapse"
+    class5Record.Description = "Class5"
+
+    local _0Record = addressList.createMemoryRecord()
+    _0Record.Address = self.Address + 0x00
+    _0Record.Description = "0x00"
+    _0Record.ShowAsHex = true
+    _0Record.appendToEntry(class5Record)
+
+    local _4Record = addressList.createMemoryRecord()
+    _4Record.Address = self.Address + 0x04
+    _4Record.Description = "0x04"
+    _4Record.ShowAsHex = true
+    _4Record.appendToEntry(class5Record)
+
+    local _8Record = addressList.createMemoryRecord()
+    _8Record.Address = self.Address + 0x08
+    _8Record.Description = "0x08 class28 ptr"
+    _8Record.ShowAsHex = true
+    _8Record.appendToEntry(class5Record)
+
+    local _cRecord = addressList.createMemoryRecord()
+    _cRecord.Address = self.Address + 0x0c
+    _cRecord.Description = "0x0c"
+    _cRecord.ShowAsHex = true
+    _cRecord.appendToEntry(class5Record)
+
+    local _10Record = addressList.createMemoryRecord()
+    _10Record.Address = self.Address + 0x10
+    _10Record.Description = "0x10"
+    _10Record.ShowAsHex = true
+    _10Record.appendToEntry(class5Record)
+
+    local _14Record = addressList.createMemoryRecord()
+    _14Record.Address = self.Address + 0x14
+    _14Record.Description = "0x14"
+    _14Record.ShowAsHex = true
+    _14Record.appendToEntry(class5Record)
+
+    local _18Record = addressList.createMemoryRecord()
+    _18Record.Address = self.Address + 0x18
+    _18Record.Description = "0x18"
+    _18Record.ShowAsHex = true
+    _18Record.appendToEntry(class5Record)
+
+    local someObjectRecord = addressList.createMemoryRecord()
+    someObjectRecord.Address = string.format("[%X] + 8", self.Address + 0x08)
+    someObjectRecord.Description = "class5.field_8_class28_ptr-&gt;field_8_tickable-&gt;field_0_vtable_ptr"
+    someObjectRecord.ShowAsHex = true
+    someObjectRecord.appendToEntry(class5Record)
+
+    class5Record.appendToEntry(parentRecord)
+end
+
 gameWorldAddress = 0x006DE4A0
 addressList = getAddressList()
 
@@ -561,17 +562,29 @@ gameWorldRecord.Description = "GameWorld"
 gameWorldRecord.IsGroupHeader = true
 gameWorldRecord.Options = "moManualExpandCollapse"
 
+local domRecord = addressList.createMemoryRecord()
+domRecord.Description = "Day of Month"
+domRecord.Address = gameWorldAddress + 0x00
+domRecord.Type = vtByte
+domRecord.appendToEntry(gameWorldRecord)
+
 local townsCountRecord = addressList.createMemoryRecord()
 townsCountRecord.Description = "Towns"
 townsCountRecord.Address = gameWorldAddress + 0x10
 townsCountRecord.Type = vtWord
 townsCountRecord.appendToEntry(gameWorldRecord)
 
-local domRecord = addressList.createMemoryRecord()
-domRecord.Description = "Day of Month"
-domRecord.Address = gameWorldAddress + 0x00
-domRecord.Type = vtByte
-domRecord.appendToEntry(gameWorldRecord)
+local gametimeRecord = addressList.createMemoryRecord()
+gametimeRecord.Description = "Gametime"
+gametimeRecord.Address = gameWorldAddress + 0x14
+gametimeRecord.ShowAsHex = true
+gametimeRecord.appendToEntry(gameWorldRecord)
+
+local churchFactorRecord = addressList.createMemoryRecord()
+churchFactorRecord.Description = "Church Factor"
+churchFactorRecord.Address = gameWorldAddress + 0x8c
+churchFactorRecord.Type = vtByte
+churchFactorRecord.appendToEntry(gameWorldRecord)
 
 gameWorldRecord.Collapsed = true
 
@@ -607,7 +620,47 @@ merchantsRecord.Options="moManualExpandCollapse"
 local m = Merchant:create(merchantsAddress + 0x24 * 0x650, 0x24)
 m:createMemoryRecord()
 
+local m2 = Merchant:create(merchantsAddress + 0x01 * 0x650, 0x01)
+m2:createMemoryRecord()
+
 merchantsRecord.Collapsed = true
+
+
+-- Operations
+operationsAddress = 0x006DF2F0
+local operationsRecord = addressList.createMemoryRecord()
+operationsRecord.Description = "Operations"
+operationsRecord.IsGroupHeader = true
+operationsRecord.Options = "moManualExpandCollapse"
+
+local _24cRecord = addressList.createMemoryRecord()
+_24cRecord.Description = "field_24c"
+_24cRecord.Address = operationsAddress + 0x24c
+_24cRecord.ShowAsHex = true
+_24cRecord.appendToEntry(operationsRecord)
+
+local fastForwardRecord = addressList.createMemoryRecord()
+fastForwardRecord.Description = "Fast Forward"
+fastForwardRecord.Address = operationsAddress + 0x92c
+fastForwardRecord.appendToEntry(operationsRecord)
+
+local stopFastForwardRecord = addressList.createMemoryRecord()
+stopFastForwardRecord.Description = "Stop Fast Forward"
+stopFastForwardRecord.Address = operationsAddress + 0x914
+stopFastForwardRecord.appendToEntry(operationsRecord)
+
+
+-- Game Loop
+gameLoopAddress = 0x006DA5F0
+gameLoopRecord = addressList.createMemoryRecord()
+gameLoopRecord.Description = "GameLoop"
+gameLoopRecord.IsGroupHeader = true
+gameLoopRecord.Options = "moManualExpandCollapse"
+
+local c5 = Class5:create(gameLoopAddress + 0x04)
+c5:createMemoryRecord(gameLoopRecord)
+
+
 
 </LuaScript>
 </CheatTable>
