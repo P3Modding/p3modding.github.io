@@ -117,7 +117,7 @@ def get_ware_satisfaction(ware_id, population_type):
     else:
         return (wares[ware_id] - weekly_consumption[ware_id])
             * satisfaction_weights[population_type][ware_id]
-            // weekly_consumption
+            // weekly_consumption[ware_id]
 
 current_satisfaction = 2 * (
     base_satisfaction
