@@ -1,5 +1,7 @@
 # Towns
 
+The pointer to the towns array is stored in the static `game_world` struct at offset `0x68`, and the size of that array at offset `0x10`.
+
 ```
 00000000 town struc ; (sizeof=0x9F8, mappedto_112)
 00000000                                         ; XREF: town_wrapper/r
