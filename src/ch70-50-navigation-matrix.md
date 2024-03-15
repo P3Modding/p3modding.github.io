@@ -17,8 +17,9 @@ import imageio
 import numpy
 
 f = open("nav_matrix.dat", "rb")
-width, height = struct.unpack("<HH", f.read(4))
-print(f"width={width}, height={height}")
+width = struct.unpack("<H", f.read(2))[0]
+height = struct.unpack("<H", f.read(2))[0]
+print(f"Reading {width}x{height} image")
 image = numpy.zeros((height, width, 3), dtype=numpy.uint8)
 
 for y in range(0, height):

@@ -19,11 +19,12 @@ HEIGHT = 472
 f = open("nav_vec.dat", "rb")
 length = struct.unpack("<H", f.read(2))[0]
 f.read(2)
-print(f"Reading {length} vecs")
+print(f"Reading {length} vecs into {WIDTH}x{HEIGHT} image")
 image = numpy.zeros((HEIGHT, WIDTH, 3), dtype=numpy.uint8)
 
 for i in range(0, length):
-    x, y = struct.unpack("<2H", f.read(4))
+    x = struct.unpack("<H", f.read(2))[0]
+    y = struct.unpack("<H", f.read(2))[0]
     image[y, x] = (0xff, 0x00, 0x00)
 
 imageio.imwrite('nav_vec.png', image)
