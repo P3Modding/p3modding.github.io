@@ -20,4 +20,6 @@
     - [Reputation](./ch05-03-reputation.md)
 - [Known Bugs](./ch30-00-known-bugs.md)
     - [New Settlement Ware Production](./ch30-01-new-settlement-ware-production.md)
+- [File Formats](./ch70-00-file-formats.md)
+    - [Navigation Matrix](./ch70-50-navigation-matrix.md)
 - [Appendix](./ch80-00-appendix.md)
