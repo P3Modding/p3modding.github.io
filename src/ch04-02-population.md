@@ -38,7 +38,7 @@ If a town is not under siege and a ware is in oversupply, more of it is consumed
 ## Satisfaction
 P3's setting "Needs of the citizens" changes how easy it is to increase the satisfaction, and how fast it changes.
 The *satisfaction classes* are displayed in-game: *Very happy*, *happy*, *very satisfied*, *satisfied*, *dissatisfied*, and *annoyed*.
-The satisfaction for each population type is stored in the town's *satisfactions* array, holding an `i16` for every population type except Beggars.
+The satisfaction for each population type is stored in the town's *satisfactions* array at offset `0x300`, holding an `i16` for every population type except Beggars.
 The function `prepare_citizens_menu_ui` at `0x0040B570` calculates the satisfaction classes by converting the `i16` into an `f32`, and picking the highest applicable class:
 
 |Satisfaction >|Satisfaction Class|
