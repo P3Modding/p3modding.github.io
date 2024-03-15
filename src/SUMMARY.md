@@ -22,6 +22,6 @@
     - [New Settlement Ware Production](./ch30-01-new-settlement-ware-production.md)
 - [File Formats](./ch70-00-file-formats.md)
     - [Navigation Matrix](./ch70-50-navigation-matrix.md)
-    - [Navpoint Matrix](./ch70-51-navpoint-matrix.md)
-    - [Navigation Vector](./ch70-53-navigation-vector.md)
+    - [Navpoint Matrix](./ch70-51-navigation-vector.md)
+    - [Navigation Vector](./ch70-53-navpoint-matrix.md)
 - [Appendix](./ch80-00-appendix.md)

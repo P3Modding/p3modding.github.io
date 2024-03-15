@@ -1,5 +1,5 @@
-# Navpoint Matrix
-The vanilla navigation matrix is stored in `./navdata/matrix_int.dat`.
+# Navigation Vector
+The vanilla navigation vector is stored in `./navdata/nav_vec.dat`.
 The file format is defined as:
 ```
           | 00  01   02  03 | 04  05 | 06  07 |
