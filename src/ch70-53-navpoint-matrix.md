@@ -1,5 +1,5 @@
 # Navpoint Matrix
-The vanilla navigation vector is stored in `./navdata/matrix_int.dat`.
+The vanilla navigation matrix is stored in `./navdata/matrix_int.dat`.
 
 The following sample code plots the direct connections:
 ```python
