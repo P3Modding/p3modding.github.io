@@ -23,5 +23,6 @@
 - [File Formats](./ch70-00-file-formats.md)
     - [Navigation Matrix](./ch70-50-navigation-matrix.md)
     - [Navigation Vector](./ch70-51-navigation-vector.md)
-    - [Navpoint Matrix](./ch70-53-navpoint-matrix.md)
+    - [Navpoint Matrix](./ch70-52-navpoint-matrix.md)
+    - [Fixed Paths](./ch70-53-fixed-paths.md)
 - [Appendix](./ch80-00-appendix.md)

@@ -2,7 +2,7 @@
 The vanilla navigation vector is stored in `./navdata/nav_vec.dat`.
 The file format is defined as:
 ```
-          | 00  01   02  03 | 04  05 | 06  07 |
+          | 00  01   02  03   04  05   06  07 |
 00000000  | Length | 00  00 | X      | Y      |
 00000008  | X      | Y      | ...             |
 ```
