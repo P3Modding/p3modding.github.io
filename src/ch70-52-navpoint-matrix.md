@@ -1,5 +1,28 @@
 # Navpoint Matrix
 The vanilla navigation matrix is stored in `./navdata/matrix_int.dat`.
+The file format is defined as:
+```
+          | 00  01   02  03   04  05   06  07 |
+00000000  | Dist            | Next   | Dist   |
+00000008  |        | Next   | Dist            |
+0000000C  | ...                               |
+```
+It is a square matrix of the navpoints, denoting the distance and path.
+Every cell holds the *total distance* between x and y, and the *next navpoint's index* required to go from x to y:
+\\[M[x][y] = (dist_{xy}, next_{xy}) \\]
+Consequently the main diagonal's distance is always 0:
+\\[
+    x = y \implies dist_{xy} = dist_{yx} = 0 \land next_{xy} = next_{yx} = x = y
+\\]
+Cells of directly connected navpoints and of navpoints connected through only one other navpoint are symmetric:
+\\[
+    next_{xy} = y \implies next_{yx} = x
+\\]
+\\[
+    next_{xz} = y \land next_{yz} = z \implies next_{zx} = y \land next_{yx} = x
+\\]
+
+Given the distances of directly connected navpoints, the navpoint matrix can be calculated using pathfinding algorithms like [A*](https://en.wikipedia.org/wiki/A*_search_algorithm).
 
 The following sample code plots the direct connections:
 ```python
