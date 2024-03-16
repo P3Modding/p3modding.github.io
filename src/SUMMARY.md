@@ -21,6 +21,7 @@
 - [Known Bugs](./ch30-00-known-bugs.md)
     - [New Settlement Ware Production](./ch30-01-new-settlement-ware-production.md)
 - [File Formats](./ch70-00-file-formats.md)
+    - [CPR](./ch70-01-cpr.md)
     - [Navigation Matrix](./ch70-50-navigation-matrix.md)
     - [Navigation Vector](./ch70-51-navigation-vector.md)
     - [Navpoint Matrix](./ch70-52-navpoint-matrix.md)
