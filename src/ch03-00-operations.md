@@ -17,7 +17,7 @@ The `operation_switch_input_container` struct contains an array of 53 operations
 The function `schedule_operation` at `0x00543F10` inserts an operation at the next free position, creating a new `operation_switch_input_container` and appending it to the last full one if necessary.
 
 ## Execution
-The function `execute_operations` at `0x00546870` executes up to 53 operations from `operations` and executes them.
+The function `execute_operations` at `0x00546870` removes up to 53 operations from `operations` and executes them.
 
 ## Debugging
 The following IDC script adds scripted breakpoints to the executing and scheduling functions, allowing the investigation of P3's operation behavior:
