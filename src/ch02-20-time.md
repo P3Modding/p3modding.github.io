@@ -35,3 +35,6 @@ This results in the following town tick behaviour:
 |03|0b00011_111|
 |...|...|
 |31|0b11111_111|
+
+#### Facilities
+All facilities tick when their town ticks.

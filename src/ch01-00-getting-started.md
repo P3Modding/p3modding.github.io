@@ -5,7 +5,8 @@ While some classes have vtables, most functions operate on structs, and the call
 
 ## Scripts and Tooling
 Sometimes, this book will provide [IDC scripts](https://www.hex-rays.com/products/ida/support/idadoc/157.shtml) that help debugging and understanding Patrician 3's runtime behavior.
-There is also a [Rust library](https://github.com/P3Modding/p3-lib) that provides an API into Patrician 3's memory space.
+A Cheat Engine table can be found in the appendix.
+There is also a [Rust library](https://github.com/P3Modding/p3-lib) that provides an API to Patrician 3's memory space.
 
 ## Abbreviations
 | Abbreviation | Meaning     |

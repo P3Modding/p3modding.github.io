@@ -1,5 +1,4 @@
 # Buildings
-
 New building ids, used in operations that create new buildings, are represented by the following enum:
 ```rust
 pub enum NewBuildingId {
