@@ -74,6 +74,31 @@ townNames =
  [0x27] = "Novgorod",
 }
 
+facilityNames =
+{
+ [0x00] = "Militia",
+ [0x01] = "Shipyard",
+ [0x02] = "Unknown",
+ [0x03] = "Weaponsmith",
+ [0x04] = "HuntingLodge",
+ [0x05] = "FishermansHut",
+ [0x06] = "Brewery",
+ [0x07] = "Workshop",
+ [0x08] = "Apiary",
+ [0x09] = "FarmGrain",
+ [0x0a] = "FarmCattle",
+ [0x0b] = "Sawmill",
+ [0x0c] = "WeavingMill",
+ [0x0d] = "Saltworks",
+ [0x0e] = "IronSmelter",
+ [0x0f] = "FarmSheep",
+ [0x10] = "Vineyard",
+ [0x11] = "Pottery",
+ [0x12] = "Brickworks",
+ [0x13] = "Pitchmaker",
+ [0x14] = "FarmHemp",
+}
+
 Town = {}
 Town.__index = Town
 
@@ -224,13 +249,28 @@ function Town:createMemoryRecord()
     accusedMerchantRecord.ShowAsHex = true
     accusedMerchantRecord.appendToEntry(record)
 
-    local facilityRecord = Facility:create(self.Address + 0x840, 0):createMemoryRecord()
-    facilityRecord.appendToEntry(record)
-
-    local facilityRecord2 = Facility:create(self.Address + 0x840 + 0x20, 1):createMemoryRecord()
-    facilityRecord2.appendToEntry(record)
-
+    local facilitiesRecord = addressList.createMemoryRecord()
+    facilitiesRecord.Description = "Facilities"
+    facilitiesRecord.IsGroupHeader = true
+    facilitiesRecord.Options = "moManualExpandCollapse"
+    for i=0,19 do
+        Facility:create(self.Address + 0x840 + 0x10*i, i):createMemoryRecord(facilitiesRecord)
+    end
+    facilitiesRecord.collapsed = true
+    facilitiesRecord.appendToEntry(record)
     self:createMilitiaRecords(record)
+
+    local field_75c_class31s_ptr_record = addressList.createMemoryRecord()
+    field_75c_class31s_ptr_record.Description = "field_75c_class31s_ptr"
+    field_75c_class31s_ptr_record.Address = self.Address + 0x75c;
+    field_75c_class31s_ptr_record.ShowAsHex = true
+    field_75c_class31s_ptr_record.appendToEntry(record)
+
+    local field_776_class31s_len_record = addressList.createMemoryRecord()
+    field_776_class31s_len_record.Description = "field_776_class31s_lend"
+    field_776_class31s_len_record.Address = self.Address + 0x776;
+    field_776_class31s_len_record.Type = vtWord
+    field_776_class31s_len_record.appendToEntry(record)
 
     record.Collapsed = true
 end
@@ -266,7 +306,7 @@ function Town:createMilitiaRecords(parentRecord)
     musketsRecord.Type = vtByte
     musketsRecord.appendToEntry(record)
 
-    --local swordsRecord = addressList.createMemoryRecord();
+    record.Collapsed = true
     record.appendToEntry(parentRecord)
 end
 
@@ -339,11 +379,16 @@ function Facility:create(address, index)
 end
 
 
-function Facility:createMemoryRecord()
+function Facility:createMemoryRecord(parentRecord)
+    local facilityId = readByte(self.Address + 0x06)
+    local employees = readSmallInteger(self.Address + 0x04)
+    if employees == 0 then
+       return
+    end
     local record = addressList.createMemoryRecord()
     record.IsGroupHeader = true
     record.Options = "moManualExpandCollapse"
-    record.Description = self.Index
+    record.Description = facilityNames[facilityId]
     record.Collapsed = true
 
     local field0Record = addressList.createMemoryRecord()
@@ -363,13 +408,33 @@ function Facility:createMemoryRecord()
     typeRecord.Type = vtByte
     typeRecord.appendToEntry(record)
 
-    local townIdRecord = addressList.createMemoryRecord()
-    townIdRecord.Address = self.Address + 0x07;
-    townIdRecord.Description = "Type"
-    townIdRecord.Type = vtByte
-    townIdRecord.appendToEntry(record)
+    local productivityRecord = addressList.createMemoryRecord()
+    productivityRecord.Address = self.Address + 0x08;
+    productivityRecord.Description = "Productivity"
+    productivityRecord.Type = vtWord
+    productivityRecord.appendToEntry(record)
 
-    return record
+    local aRecord = addressList.createMemoryRecord()
+    aRecord.Address = self.Address + 0x0a;
+    aRecord.Description = "a"
+    aRecord.Type = vtWord
+    aRecord.appendToEntry(record)
+
+    local cRecord = addressList.createMemoryRecord()
+    cRecord.Address = self.Address + 0x0c;
+    cRecord.Description = "c"
+    cRecord.Type = vtWord
+    cRecord.appendToEntry(record)
+
+    local eRecord = addressList.createMemoryRecord()
+    eRecord.Address = self.Address + 0x0e;
+    eRecord.Description = "e"
+    eRecord.Type = vtWord
+    eRecord.appendToEntry(record)
+
+    record.Collapsed = true
+
+    record.appendToEntry(parentRecord)
 end
 
 Merchant = {}
@@ -476,23 +541,30 @@ function Merchant:createReputationRecords(parentRecord)
         reputationRecord.Description = townNames[getTownId(i)]
         reputationRecord.appendToEntry(reputationRecords)
 
-        local _11cField0 = addressList.createMemoryRecord()
-        _11cField0.Address = self.Address + 0x11c + (i*3*4)
-        _11cField0.Type = vtSingle
-        _11cField0.Description = "Buildings"
-        _11cField0.appendToEntry(reputationRecord)
+        local buildingReputationRecord = addressList.createMemoryRecord()
+        buildingReputationRecord.Address = self.Address + 0x11c + (i*3*4)
+        buildingReputationRecord.Type = vtSingle
+        buildingReputationRecord.Description = "Buildings"
+        buildingReputationRecord.appendToEntry(reputationRecord)
 
-        local _11cField4 = addressList.createMemoryRecord()
-        _11cField4.Address = self.Address + 0x11c + 0x04 + (i*3*4)
-        _11cField4.Type = vtSingle
-        _11cField4.Description = "Donations"
-        _11cField4.appendToEntry(reputationRecord)
+        local donationsReputationRecord = addressList.createMemoryRecord()
+        donationsReputationRecord.Address = self.Address + 0x11c + 0x04 + (i*3*4)
+        donationsReputationRecord.Type = vtSingle
+        donationsReputationRecord.Description = "Donations"
+        donationsReputationRecord.appendToEntry(reputationRecord)
 
-        local _11cField8 = addressList.createMemoryRecord()
-        _11cField8.Address = self.Address + 0x11c + 0x08 + (i*3*4)
-        _11cField8.Type = vtSingle
-        _11cField8.Description = "Trading"
-        _11cField8.appendToEntry(reputationRecord)
+        local tradingReputationRecord = addressList.createMemoryRecord()
+        tradingReputationRecord.Address = self.Address + 0x11c + 0x08 + (i*3*4)
+        tradingReputationRecord.Type = vtSingle
+        tradingReputationRecord.Description = "Trading"
+        tradingReputationRecord.appendToEntry(reputationRecord)
+
+        local sailorReputationRecord = addressList.createMemoryRecord()
+        sailorReputationRecord.Address = self.Address + 0xf0 + i
+        sailorReputationRecord.Type = vtByte
+        sailorReputationRecord.Description = "Sailors"
+        sailorReputationRecord.appendToEntry(reputationRecord)
+
 
         reputationRecord.Collapsed = true
     end

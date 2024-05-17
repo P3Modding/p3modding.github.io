@@ -7,6 +7,7 @@
     - [Ship Weapon Types](./ch02-02-ship-weapons.md)
     - [Ship Types](./ch02-03-ships.md)
     - [Buildings](./ch02-10-buildings.md)
+    - [Facilities](./ch02-11-facilities.md)
     - [Time](./ch02-20-time.md)
     - [Storage](./ch02-100-storage.md)
 - [Operations](./ch03-00-operations.md)
