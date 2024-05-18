@@ -51,7 +51,7 @@ At `0x0066DEB0` there is a table that contains the requirements of every ship ty
 Wares are consumed as listed in the table.
 The ship price is calculated as follows:
 
-```
+```python
 def structure_markup(structure):
     if structure < 20:
         return 900
