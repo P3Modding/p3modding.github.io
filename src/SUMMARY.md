@@ -27,7 +27,7 @@
     - [Ranks](./ch05-01-ranks.md)
     - [Company Value](./ch05-02-company-value.md)
     - [Reputation (Population)](./ch05-03-reputation.md)
-    - [Reputation (Sailors)](./ch05-04-reputation-sailors.md)
+    - [Sailor Reputation and Sailor Pools](./ch05-04-sailor-pools.md)
 - [Known Bugs](./ch30-00-known-bugs.md)
     - [New Settlement Ware Production](./ch30-01-new-settlement-ware-production.md)
 - [File Formats](./ch70-00-file-formats.md)

@@ -1,205 +1,200 @@
 # Merchants
 ```
-00000000 merchant struc ; (sizeof=0x650, mappedto_114)
-00000000                                         ; XREF: merchant_wrapper/r
-00000000 field_0_money dd ?
-00000004 field_4 dd ?
-00000008 field_8 dw ?
-0000000A field_A dw ?
-0000000C field_C_first_office_index dw ?
-0000000E field_E_first_ship_id dw ?
-00000010 field_10 dd ?
-00000014 field_14 dw ?
-00000016 field_16 dw ?
-00000018 field_18 db ?
-00000019 field_19_hometown_index db ?
-0000001A field_1A db ?
-0000001B field_1B db ?
-0000001C field_1C db ?
-0000001D field_1D db ?
-0000001E field_1E_decreasing_thing db ?
-0000001F field_1F db ?
-00000020 field_20 dw ?
-00000022 field_22 dw ?
-00000024 field_24 db ?
-00000025 field_25 db ?
-00000026 field_26 db ?
-00000027 field_27 db ?
-00000028 field_28 db ?
-00000029 field_29 db ?
-0000002A field_2A db ?
-0000002B field_2B db ?
-0000002C field_2C dd ?
-00000030 field_30 db ?
-00000031 field_31 db ?
-00000032 field_32 db ?
-00000033 field_33 db ?
-00000034 field_34 dd ?
-00000038 field_38 dd ?
-0000003C field_3C dd ?
-00000040 field_40 dd ?
-00000044 field_44 dd ?
-00000048 field_48 dd ?
-0000004C field_4C dd ?
-00000050 field_50 dd ?
-00000054 field_54 dd ?
-00000058 field_58 dd ?
-0000005C field_5C dd ?
-00000060 field_60 dd ?
-00000064 field_64 dd ?
-00000068 field_68 dd ?
-0000006C field_6C dd ?
-00000070 field_70 dd ?
-00000074 field_74 dd ?
-00000078 field_78 dd ?
-0000007C field_7C dd ?
-00000080 field_80 dd ?
-00000084 field_84 dd ?
-00000088 field_88 dd ?
-0000008C field_8C dd ?
-00000090 field_90 dd ?
-00000094 field_94 dd ?
-00000098 field_98 dd ?
-0000009C field_9C dd ?
-000000A0 field_A0 dd ?
-000000A4 field_A4 dd ?
-000000A8 field_A8 dd ?
-000000AC field_AC dd ?
-000000B0 field_B0 dd ?
-000000B4 field_B4 dd ?
-000000B8 field_B8 dd ?
-000000BC field_BC dd ?
-000000C0 field_C0 dd ?
-000000C4 field_C4 dd ?
-000000C8 field_C8 dd ?
-000000CC field_CC dd ?
-000000D0 field_D0 dd ?
-000000D4 field_D4 dd ?
-000000D8 field_D8 dd ?
-000000DC field_DC dd ?
-000000E0 field_E0 dd ?
-000000E4 field_E4 dd ?
-000000E8 field_E8 dd ?
-000000EC field_EC dd ?
-000000F0 field_F0 dd ?
-000000F4 field_F4 dd ?
-000000F8 field_F8 dd ?
-000000FC field_FC dd ?
-00000100 field_100 dd ?
-00000104 field_104 dd ?
-00000108 field_108 dd ?
-0000010C field_10C dd ?
-00000110 field_110 dd ?
-00000114 field_114 dd ?
-00000118 field_118 dd ?
-0000011C field_11C class25 40 dup(?)
-000002FC field_2FC_latest_reputations dd 40 dup(?)
-0000039C field_39C_ranks db 40 dup(?)
-000003C4 field_3C4_old_reputations dd 40 dup(?)
-00000464 field_464_base_reputation_factor dd ?
-00000468 field_468 dd ?
-0000046C field_46C_company_value dd ?
-00000470 field_470_company_capacity dd ?
-00000474 field_474 dd ?
-00000478 field_478 dw ?
-0000047A field_47A dw ?
-0000047C field_47C dd ?
-00000480 field_480 dd ?
-00000484 field_484 dd ?
-00000488 field_488 dd ?
-0000048C field_48C dd ?
-00000490 field_490 dd ?
-00000494 field_494 dd ?
-00000498 field_498 dd ?
-0000049C field_49C dd ?
-000004A0 field_4A0 dd ?
-000004A4 field_4A4 dd ?
-000004A8 field_4A8 dd ?
-000004AC field_4AC dd ?
-000004B0 field_4B0 dd ?
-000004B4 field_4B4 dd ?
-000004B8 field_4B8_recent_widthdrawals dd ?
-000004BC field_4BC_recent_donations dd ?
-000004C0 field_4C0 dd ?
-000004C4 field_4C4 dd ?
-000004C8 field_4C8 dd ?
-000004CC field_4CC dd ?
-000004D0 field_4D0 dd ?
-000004D4 field_4D4 dd ?
-000004D8 field_4D8 dd ?
-000004DC field_4DC dd ?
-000004E0 field_4E0 dd ?
-000004E4 field_4E4 dd ?
-000004E8 field_4E8 dd ?
-000004EC field_4EC dd ?
-000004F0 field_4F0 dd ?
-000004F4 field_4F4 dd ?
-000004F8 field_4F8 dd ?
-000004FC field_4FC dd ?
-00000500 field_500 dd ?
-00000504 field_504 dd ?
-00000508 field_508 dd ?
-0000050C field_50C dd ?
-00000510 field_510 dd ?
-00000514 field_514 dd ?
-00000518 field_518 dd ?
-0000051C field_51C dd ?
-00000520 field_520 dd ?
-00000524 field_524 dd ?
-00000528 field_528 dd ?
-0000052C field_52C dd ?
-00000530 field_530 dd ?
-00000534 field_534 dd ?
-00000538 field_538 dd ?
-0000053C field_53C dd ?
-00000540 field_540 dd ?
-00000544 field_544 dd ?
-00000548 field_548 dd ?
-0000054C field_54C dd ?
-00000550 field_550 dd ?
-00000554 field_554 dd ?
-00000558 field_558 dd ?
-0000055C field_55C dd ?
-00000560 field_560 dd ?
-00000564 field_564 dd ?
-00000568 field_568 dd ?
-0000056C field_56C dd ?
-00000570 field_570 dd ?
-00000574 field_574 dd ?
-00000578 field_578 dd ?
-0000057C field_57C dd ?
-00000580 field_580 dd ?
-00000584 field_584 dd ?
-00000588 field_588 dd ?
-0000058C field_58C dd ?
-00000590 field_590 dd ?
-00000594 field_594 dd ?
-00000598 field_598 dd ?
-0000059C field_59C dd ?
-000005A0 field_5A0 dd ?
-000005A4 field_5A4 dd ?
-000005A8 field_5A8_last_autotrade_prices dd 20 dup(?)
-000005F8 field_5F8 dd ?
-000005FC field_5FC dd ?
-00000600 field_600 dd ?
-00000604 field_604 dd ?
-00000608 field_608 dd ?
-0000060C field_60C dd ?
-00000610 field_610 dd ?
-00000614 field_614 dd ?
-00000618 field_618 dd ?
-0000061C field_61C dd ?
-00000620 field_620 dd ?
-00000624 field_624 dd ?
-00000628 field_628 dd ?
-0000062C field_62C dd ?
-00000630 field_630 dd ?
-00000634 field_634 dd ?
-00000638 field_638 dd ?
-0000063C field_63C dd ?
-00000640 field_640 dd ?
-00000644 field_644 dd ?
-00000648 field_648 dd ?
-0000064C field_64C dd ?
-00000650 merchant ends
+00000000 struct merchant // sizeof=0x650
+00000000 {                                       // XREF: merchant_wrapper/r
+00000000     int field_0_money __tabform(NODUPS);
+00000004     int field_4;
+00000008     __int16 field_8;
+0000000A     __int16 field_A;
+0000000C     unsigned __int16 field_C_first_office_index;
+0000000E     unsigned __int16 field_E_first_ship_id;
+00000010     int field_10;
+00000014     char field_14;
+00000015     unsigned __int8 field_15;
+00000016     char field_16;
+00000017     char field_17;
+00000018     char field_18;
+00000019     unsigned __int8 field_19_hometown_index;
+0000001A     char field_1A_is_male;
+0000001B     char field_1B;
+0000001C     __int16 field_1C;
+0000001E     char field_1E_decreasing_thing;
+0000001F     unsigned __int8 field_1F_sailor_reputation;
+00000020     __int16 field_20;
+00000022     __int16 field_22;
+00000024     char field_24;
+00000025     char field_25;
+00000026     char field_26;
+00000027     char field_27;
+00000028     char field_28;
+00000029     char field_29;
+0000002A     char field_2A;
+0000002B     char field_2B;
+0000002C     int field_2C;
+00000030     char field_30;
+00000031     unsigned __int8 field_31_spouse_hometown_index;
+00000032     unsigned __int8 field_32_spouse_reputation_bonus;
+00000033     char field_33;
+00000034     int field_34;
+00000038     char field_38;
+00000039     unsigned __int8 field_39;
+0000003A     unsigned __int8 field_3A;
+0000003B     char field_3B;
+0000003C     int field_3C;
+00000040     int field_40;
+00000044     int field_44;
+00000048     int field_48;
+0000004C     int field_4C;
+00000050     int field_50;
+00000054     int field_54;
+00000058     int field_58;
+0000005C     int field_5C;
+00000060     int field_60;
+00000064     int field_64;
+00000068     int field_68;
+0000006C     int field_6C;
+00000070     int field_70;
+00000074     int field_74;
+00000078     int field_78;
+0000007C     int field_7C;
+00000080     int field_80;
+00000084     int field_84;
+00000088     int field_88;
+0000008C     int field_8C;
+00000090     int field_90;
+00000094     int field_94;
+00000098     int field_98;
+0000009C     int field_9C;
+000000A0     int field_A0;
+000000A4     int field_A4;
+000000A8     int field_A8;
+000000AC     int field_AC;
+000000B0     int field_B0;
+000000B4     int field_B4;
+000000B8     int field_B8;
+000000BC     int field_BC;
+000000C0     int field_C0;
+000000C4     int field_C4;
+000000C8     int field_C8;
+000000CC     int field_CC;
+000000D0     int field_D0;
+000000D4     int field_D4;
+000000D8     int field_D8;
+000000DC     int field_DC;
+000000E0     int field_E0;
+000000E4     char *field_E4_family_name;
+000000E8     char *field_E8_name;
+000000EC     int field_EC;
+000000F0     unsigned __int8 field_F0_sailor_pools[40];
+00000118     int field_118;
+0000011C     class25 field_11C_local_reputation_components[40];
+000002FC     float field_2FC_latest_reputations[40];
+0000039C     unsigned __int8 field_39C_ranks[40];
+000003C4     float field_3C4_old_reputations[40];
+00000464     float field_464_base_rep_factor;
+00000468     int field_468;
+0000046C     int field_46C_company_value;
+00000470     int field_470_company_capacity;
+00000474     int field_474;
+00000478     unsigned __int16 field_478;
+0000047A     __int16 field_47A;
+0000047C     int field_47C;
+00000480     int field_480;
+00000484     int field_484;
+00000488     int field_488;
+0000048C     int field_48C;
+00000490     int field_490;
+00000494     int field_494;
+00000498     int field_498;
+0000049C     int field_49C;
+000004A0     int field_4A0;
+000004A4     int field_4A4;
+000004A8     int field_4A8;
+000004AC     int field_4AC;
+000004B0     int field_4B0;
+000004B4     int field_4B4;
+000004B8     int field_4B8_recent_widthdrawals;
+000004BC     int field_4BC_recent_donations;
+000004C0     int field_4C0;
+000004C4     int field_4C4;
+000004C8     int field_4C8;
+000004CC     int field_4CC;
+000004D0     int field_4D0;
+000004D4     int field_4D4;
+000004D8     int field_4D8;
+000004DC     int field_4DC;
+000004E0     int field_4E0;
+000004E4     int field_4E4;
+000004E8     int field_4E8;
+000004EC     int field_4EC;
+000004F0     int field_4F0;
+000004F4     int field_4F4;
+000004F8     int field_4F8;
+000004FC     int field_4FC;
+00000500     int field_500;
+00000504     int field_504;
+00000508     int field_508;
+0000050C     int field_50C;
+00000510     int field_510;
+00000514     int field_514;
+00000518     int field_518;
+0000051C     int field_51C;
+00000520     int field_520;
+00000524     int field_524;
+00000528     int field_528;
+0000052C     int field_52C;
+00000530     int field_530;
+00000534     int field_534;
+00000538     int field_538;
+0000053C     int field_53C;
+00000540     int field_540;
+00000544     int field_544;
+00000548     int field_548;
+0000054C     int field_54C;
+00000550     int field_550;
+00000554     int field_554;
+00000558     int field_558;
+0000055C     int field_55C;
+00000560     int field_560;
+00000564     int field_564;
+00000568     int field_568;
+0000056C     int field_56C;
+00000570     int field_570;
+00000574     int field_574;
+00000578     int field_578;
+0000057C     int field_57C;
+00000580     int field_580;
+00000584     int field_584;
+00000588     int field_588;
+0000058C     int field_58C;
+00000590     int field_590;
+00000594     int field_594;
+00000598     int field_598;
+0000059C     int field_59C;
+000005A0     int field_5A0;
+000005A4     int field_5A4;
+000005A8     int field_5A8_last_autotrade_prices[20];
+000005F8     int field_5F8;
+000005FC     int field_5FC;
+00000600     int field_600;
+00000604     int field_604;
+00000608     int field_608;
+0000060C     int field_60C;
+00000610     int field_610;
+00000614     int field_614;
+00000618     int field_618;
+0000061C     int field_61C;
+00000620     int field_620;
+00000624     int field_624;
+00000628     int field_628;
+0000062C     int field_62C;
+00000630     int field_630;
+00000634     int field_634;
+00000638     int field_638;
+0000063C     int field_63C;
+00000640     int field_640;
+00000644     int field_644;
+00000648     int field_648;
+0000064C     int field_64C;
+00000650 };
 ```
