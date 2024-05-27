@@ -33,7 +33,7 @@
     - [Beggar Satisfaction](./0030-bugs/0002-beggar-satisfaction.md)
 - [Patches](./0035-patches/0000.md)
     - [Increase Alderman "Found Settlement" Mission Limit](./0035-patches/0001-found-settlement-limit.md)
-    - [Render All Ships](./0035-patches/0002-render-al-ships.md)
+    - [Render All Ships](./0035-patches/0002-render-all-ships.md)
 - [File Formats](./ch70-00-file-formats.md)
     - [CPR](./ch70-01-cpr.md)
     - [Navigation Matrix](./ch70-50-navigation-matrix.md)
