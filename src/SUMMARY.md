@@ -34,6 +34,7 @@
 - [Patches](./0035-patches/0000.md)
     - [Increase Alderman "Found Settlement" Mission Limit](./0035-patches/0001-found-settlement-limit.md)
     - [Render All Ships](./0035-patches/0002-render-all-ships.md)
+    - [Show All Sailors](./0035-patches/0003-show-all-sailors.md)
 - [File Formats](./ch70-00-file-formats.md)
     - [CPR](./ch70-01-cpr.md)
     - [Navigation Matrix](./ch70-50-navigation-matrix.md)
