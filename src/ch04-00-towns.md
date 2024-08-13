@@ -1,6 +1,6 @@
 # Towns
 
-P3's vanilla map has 40 hardcoded potential towns, which are assigned to one of 5 different regions:
+P3 has 40 different towns, which are assigned to one of 5 different regions:
 
 |Id|Name|
 |-|-|
@@ -11,6 +11,51 @@ P3's vanilla map has 40 hardcoded potential towns, which are assigned to one of 
 |4|East|
 
 Towns are indentified by their id, and `scripts/StadtDaten.ini` defines details such as the corresponding region:
+
+|Id|Name|Region|
+|-|-|-|
+|0|Edinburgh|West|
+|1|Newcastle|West|
+|2|Scarborough|West|
+|3|Boston|West|
+|4|London|West|
+|5|Bruges|West|
+|6|Haarlem|North Sea Area|
+|7|Harlingen|North Sea Area|
+|8|Groningen|North Sea Area|
+|9|Cologne|North Sea Area|
+|10|Bremen|North Sea Area|
+|11|Ripen|North Sea Area|
+|12|Hamburg|North Sea Area|
+|13|Flensburg|North Sea Area|
+|14|Luebeck|North Sea Area|
+|15|Rostock|North Sea Area|
+|16|Bergen|North|
+|17|Stavanger|North|
+|18|Toensberg|North|
+|19|Oslo|North|
+|20|Aalborg|North|
+|21|Goeteborg|North|
+|22|Naestved|North|
+|23|Malmoe|North|
+|24|Ahus|North|
+|25|Stockholm|North|
+|26|Visby|North|
+|27|Helsinki|North|
+|28|Stettin|Baltic Sea Area|
+|29|Ruegenwald|Baltic Sea Area|
+|30|Gdansk|Baltic Sea Area|
+|31|Torun|Baltic Sea Area|
+|32|Koenigsberg|Baltic Sea Area|
+|33|Memel|Baltic Sea Area|
+|34|Windau|East|
+|35|Riga|East|
+|36|Pernau|East|
+|37|Reval|East|
+|38|Ladoga|East|
+|39|Novgorod|East|
+
+The "Found Settlement" alderman mission UI does not use the definitions from `scripts/StadtDaten.ini`, but instead uses the following hardcoded mapping:
 
 |Id|Name|Region|
 |-|-|-|
@@ -47,7 +92,7 @@ Towns are indentified by their id, and `scripts/StadtDaten.ini` defines details 
 |30|Gdansk|Baltic Sea Area|
 |31|Torun|Baltic Sea Area|
 |32|Koenigsberg|Baltic Sea Area|
-|33|Memel|Baltic Sea Area|
+|33|Memel|East|
 |34|Windau|East|
 |35|Riga|East|
 |36|Pernau|East|
