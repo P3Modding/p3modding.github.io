@@ -54,7 +54,6 @@ Not having enough wares to cover the **consumption** does not impact celebration
 ## Attendance
 The amount of guests is calculated as follows:
 ```python
-
 attendance_ratio = min(99, max(0, 39 + local_reputation))
 eligible_citizens = attendance_ratio * total_citizens / 100
 satisfied_wares = 0
@@ -84,14 +83,19 @@ Depending on how many wares were available in sufficient amounts, the celebratio
 
 A celebration's level is calculated as follows:
 ```python
-level = satisfied_wares / 2
+level = satisfied_wares // 2
 ```
 
 Consequently, a partially satisfied ware does not contribute to the celebration's success.
 
-
-
+## Satisfaction
 
 ## Reputation
+Under be assumption that the base_rep_factor is always `1`, the impact of each celebration level is:
 
-## Satisfaction
+|Level|Social Reputation Impact|
+|-|-|
+|0|-1|
+|1|0.5|
+|2|1|
+|3|1.5|
