@@ -1,5 +1,5 @@
 # Unfreeze Port
-The `st_unfreeze_port` function at `0x004E94A4`.
+The `st_unfreeze_port` function is at `0x004E94A4`.
 It removes the town's `frozen` flag and updates the UI.
 
 ```

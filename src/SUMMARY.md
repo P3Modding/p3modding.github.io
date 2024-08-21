@@ -12,6 +12,7 @@
     - [Storage](./ch02-100-storage.md)
 - [Operations](./0010-operations/0000.md)
 - [Scheduled Tasks](./0020-scheduled-tasks/0000.md)
+    - [Celebration](./0020-scheduled-tasks/0007-celebration.md)
     - [Update Sailor Pools](./0020-scheduled-tasks/0026-update-sailor-pools.md)
     - [Unfreeze Port](./0020-scheduled-tasks/0053-unfreeze-port.md)
 - [Towns](./ch04-00-towns.md)
