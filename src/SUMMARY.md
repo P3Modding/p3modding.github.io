@@ -29,7 +29,7 @@
     - [Company Value](./ch05-02-company-value.md)
     - [Reputation (Population)](./ch05-03-reputation.md)
     - [Sailor Reputation and Sailor Pools](./ch05-04-sailor-pools.md)
-- [Ships](./ships/ships.md)
+- [Ships](./ships.md)
     - [Sea Battles](./ships/sea-battles.md)
         - [Wind](./ships/sea-battles/wind.md)
         - [Range](./ships/sea-battles/range.md)

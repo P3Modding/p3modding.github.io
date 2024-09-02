@@ -75,7 +75,7 @@ def apply_difficulty_and_maintenance(
 Since `f` cannot exceed `6`, the bonus damage from difficulty and maintenance will not exceed \\(\frac{1}{5} * damage \\).
 
 ## Normal Distribution and Minimum
-Finally, a factor with a discrete uniform distribution in the discrete (up to the second decimal point) interval from `0.85` to `1.15` is applied, and a minimum damage of `1` is enforced:
+Finally, a factor with a discrete uniform (assuming the sea battle's PRNG works as intended) distribution in the discrete (up to the second decimal point) interval from `0.85` to `1.15` is applied, and a minimum damage of `1` is enforced:
 ```python
 # Discrete distribution
 damage = damage * (battle_rand() % 31 + 85) // 100

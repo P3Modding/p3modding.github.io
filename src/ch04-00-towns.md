@@ -101,7 +101,7 @@ The "Found Settlement" alderman mission UI does not use the definitions from `sc
 |39|Novgorod|East|
 
 ## Town Struct
-The pointer to the towns array is stored in the static `game_world` struct at offset `0x68`, and the size of that array at offset `0x10`.
+The pointer to the towns array is stored in the static `game_world` struct at offset `0x68`, and the length of that array at offset `0x10`.
 **A town's id is not its index in the towns array**.
 
 The following fields have been identified:
