@@ -83,3 +83,21 @@ damage = damage * (battle_rand() % 31 + 85) // 100
 # Minimum
 damage = max(damage, 1)
 ```
+
+## Sailor Damage
+
+```python
+def calc_killed_sailors(
+    sailors: int,
+    damage: int,
+    rng: int,
+    pending_sailor_damage: int,
+    ship_max_hp: int
+) -> Tuple[int, int]:
+    sailor_damage_rng = (rng & 0x400) + 3072 # 3072 or 4096
+    scaled_sailor_damage = (sailors + 1) * sailor_damage_rng
+    final_sailor_damage = pending_sailor_damage + scaled_sailor_damage / (ship_max_hp // 16)
+    killed_sailors = final_sailor_damage >> 16
+    new_pending_sailor_damage = final_sailor_damage & 0xffff
+    return killed_sailors, new_pending_sailor_damage
+```
