@@ -33,6 +33,7 @@
     - [Sea Battles](./ships/sea-battles.md)
         - [Wind](./ships/sea-battles/wind.md)
         - [Range](./ships/sea-battles/range.md)
+        - [Hitboxes](./ships/sea-battles/hitboxes.md)
         - [Projectile Damage](./ships/sea-battles/damage.md)
         - [Reef Damage](./ships/sea-battles/reef-damage.md)
 - [Known Bugs](./0030-bugs/0000.md)
