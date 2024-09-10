@@ -1,2 +1,3 @@
-book
-.venv
+/book
+/.venv
+/test

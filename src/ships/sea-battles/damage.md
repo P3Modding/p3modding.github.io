@@ -85,7 +85,7 @@ damage = max(damage, 1)
 ```
 
 ## Sailor Damage
-
+Damage to sailors is calculated as follows:
 ```python
 def calc_killed_sailors(
     sailors: int,
