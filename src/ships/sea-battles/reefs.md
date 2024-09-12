@@ -1,4 +1,4 @@
-# Reef Damage
+# Reefs
 The `tick_sea_battle_object_pair` function at `0x00608850` applies the following damage to a ship on a reef:
 
 ```python
