@@ -37,6 +37,7 @@
             - [Range](./ships/sea-battles/projectiles/range.md)
             - [Damage](./ships/sea-battles/projectiles/damage.md)
         - [Reefs](./ships/sea-battles/reefs.md)
+- [Modloader](./modloader.md)
 - [Known Bugs](./bugs.md)
     - [New Settlement Ware Production](./bugs/0001-new-settlement-ware-production.md)
     - [Beggar Satisfaction](./bugs/0002-beggar-satisfaction.md)
