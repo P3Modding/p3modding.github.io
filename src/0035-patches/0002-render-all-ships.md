@@ -1,7 +1,10 @@
 # Render All Ships Patch
+<p style="text-align:center">
+    <img src="scrollmap-render-all-ships.png">
+</p>
 
 ## Summary
-This patch modifies P3 to render all ships at sea, not just the up to two ships spotted by each player ship.
+This patch modifies P3 to render all ships on the scrollmap, not just the up to two ships spotted by each player ship or convoy.
 
 ## Details
 The first half of the `draw_spotted_ships` function at `004516B0` determines which ships should be rendered.
@@ -104,7 +107,7 @@ fixup_all_ships:
         ret
 ```
 
-A call to `fixup_all_ships` has to be injected at `0x00451759` with the following assembly instructions.
+A jump to `fixup_all_ships` has to be injected at `0x00451759` with the following assembly instructions.
 #ADDRESSOFPATCH needs to be replaced with the address of `fixup_all_ships`.
 ```assembly
 # save regs
