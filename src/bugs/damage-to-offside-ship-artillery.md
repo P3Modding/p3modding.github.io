@@ -1,4 +1,4 @@
-# Damage to Offside Ship Artillery
+# Damage to Offside Ship Artillery Bug
 
 ## Summary
 Incoming projectiles don't always damage weapons on the correct side of the ship, because the `get_sea_battle_projectile_impact_direction` function at `0x0060A73C`, which calculates which side of the ship has been hit, is broken.

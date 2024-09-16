@@ -1,4 +1,4 @@
-# Beggar Satisfaction Bug
+# Siege Beggar Satisfaction Bonus Bug
 
 ## Summary
 The satisfaction of beggars never decreases, but increases if a town wins a siege.
