@@ -40,6 +40,7 @@
 - [Modloader](./modloader.md)
 - [Known Bugs](./bugs.md)
     - [New Settlement Ware Production](./bugs/0001-new-settlement-ware-production.md)
+    - [Market Hall Production of Town](./bugs/market-hall-production-town.md)
     - [Beggar Satisfaction](./bugs/0002-beggar-satisfaction.md)
     - [Damage to Offside Ship Artillery](./bugs/damage-to-offside-ship-artillery.md)
 - [Patches](./0035-patches/0000.md)
