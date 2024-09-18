@@ -41,7 +41,7 @@
 - [Known Bugs](./bugs.md)
     - [New Settlement Ware Production](./bugs/new-settlement-ware-production.md)
     - [Market Hall Production of Town](./bugs/market-hall-production-town.md)
-    - [Beggar Satisfaction](./bugs/siege-beggar-satisfaction-bonus.md)
+    - [Siege Beggar Satisfaction Bonus](./bugs/siege-beggar-satisfaction-bonus.md)
     - [Damage to Offside Ship Artillery](./bugs/damage-to-offside-ship-artillery.md)
 - [Patches](./0035-patches/0000.md)
     - [Increase Alderman "Found Settlement" Mission Limit](./0035-patches/0001-found-settlement-limit.md)
