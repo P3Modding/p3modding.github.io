@@ -3,7 +3,7 @@ The [Patrician3 Modloader](https://github.com/P3Modding/p3-lib/tree/master/p3-mo
 
 ## Usage
 - Download the [latest release](https://github.com/P3Modding/p3-lib/releases)
-- Move `p3_modloader.dll` and `Patrician3_modloader.exe` into your Patrician3 folder
+- Move `p3_modloader.dll` and [`Patrician3_modloader.exe`](./modloader/Patrician3_modloader.exe) into your Patrician3 folder
 - Create a folder called `mods`
 - Move all mods into that folder
 
