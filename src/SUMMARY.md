@@ -36,7 +36,7 @@
         - [Hitboxes](./ships/sea-battles/hitboxes.md)
         - [Projectiles](./ships/sea-battles/projectiles.md)
             - [Range](./ships/sea-battles/projectiles/range.md)
-            - [Damage](./ships/sea-battles/projectiles/damage.md)
+            - [Impact](./ships/sea-battles/projectiles/impact.md)
         - [Reefs](./ships/sea-battles/reefs.md)
 - [Modloader](./modloader.md)
 - [Known Bugs](./bugs.md)
