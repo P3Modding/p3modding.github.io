@@ -1,4 +1,4 @@
-# Invulnerable Ship Artillery Slots
+# Invulnerable Ship Artillery Slots Bug
 <p style="text-align:center">
     <img src="invulnerable-ship-artillery-slots.png">
 </p>

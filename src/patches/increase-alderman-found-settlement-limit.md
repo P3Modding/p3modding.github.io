@@ -1,4 +1,4 @@
-# Increase Alderman "Found Settlement" Mission Limit
+# Increase Alderman "Found Settlement" Mission Limit Patch
 
 ## Summary
 This patch allows the player build towns beyond the 26th town through the "Found Settlement" mission.

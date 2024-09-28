@@ -1,6 +1,6 @@
-# Show All Sailors
+# Tavern Show All Sailors Patch
 <p style="text-align:center">
-    <img src="0003-show-all-sailors.png">
+    <img src="tavern-show-all-sailors.png">
 </p>
 
 ## Summary
