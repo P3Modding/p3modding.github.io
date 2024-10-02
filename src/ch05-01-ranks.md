@@ -27,3 +27,6 @@ However, to actually reach the next rank, the following reputation values must b
 |20|Travelling Merchant|
 |40|Councillor|
 |60|Patrician|
+
+## Building Permits
+Once you reach the Trader rank in a town, it'll grant you the building permit.

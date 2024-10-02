@@ -1,5 +1,4 @@
 # Towns
-
 P3 has 40 different towns, which are assigned to one of 5 different regions:
 
 |Id|Name|
@@ -99,6 +98,9 @@ The "Found Settlement" alderman mission UI does not use the definitions from `sc
 |37|Reval|East|
 |38|Ladoga|East|
 |39|Novgorod|East|
+
+## Town Names
+There is an array of pointers (indexed by the town's **index**) to town names at `0x006DDA00`.
 
 ## Town Struct
 The pointer to the towns array is stored in the static `game_world` struct at offset `0x68`, and the length of that array at offset `0x10`.
