@@ -329,6 +329,13 @@ function Town:createMemoryRecord()
 
     Shipyard:create(self.Address + 0x810):createMemoryRecord(record)
 
+    local unemployedCaptainIndexRecord = addressList.createMemoryRecord()
+    unemployedCaptainIndexRecord.Description = "Unemployed Captain Index"
+    unemployedCaptainIndexRecord.Address = self.Address + 0x82e;
+    unemployedCaptainIndexRecord.Type = vtWord
+    unemployedCaptainIndexRecord.ShowAsHex = true
+    unemployedCaptainIndexRecord.appendToEntry(record)
+
     record.Collapsed = true
 end
 
@@ -408,22 +415,22 @@ function Town:createConsumptionDataRecords(parentRecord)
     local consumptionDataRecord = addressList.createMemoryRecord()
     consumptionDataRecord.IsGroupHeader = true
     consumptionDataRecord.Options = "moManualExpandCollapse"
-    consumptionDataRecord.Description = "Consumption Data"
+    consumptionDataRecord.Description = "Price Thresholds"
     for i=0,23 do
         local wareData0 = addressList.createMemoryRecord()
-        wareData0.Address = self.Address + 0x4f0 + (i*4)
+        wareData0.Address = self.Address + 0x4f0 + (i*0x10)
         wareData0.appendToEntry(consumptionDataRecord)
         wareData0.Description = wareNames[i].." (weekly)"
         local wareData4 = addressList.createMemoryRecord()
-        wareData4.Address = self.Address + 0x4f0 + (i*4) + 0x04
+        wareData4.Address = self.Address + 0x4f0 + (i*0x10) + 0x04
         wareData4.appendToEntry(consumptionDataRecord)
         wareData4.Description = wareNames[i].." (4)"
         local wareData8 = addressList.createMemoryRecord()
-        wareData8.Address = self.Address + 0x4f0 + (i*4) + 0x08
+        wareData8.Address = self.Address + 0x4f0 + (i*0x10) + 0x08
         wareData8.appendToEntry(consumptionDataRecord)
         wareData8.Description = wareNames[i].." (8)"
         local wareDataC = addressList.createMemoryRecord()
-        wareDataC.Address = self.Address + 0x4f0 + (i*4) + 0x0C
+        wareDataC.Address = self.Address + 0x4f0 + (i*0x10) + 0x0C
         wareDataC.appendToEntry(consumptionDataRecord)
         wareDataC.Description = wareNames[i].." (C)"
     end
@@ -1001,7 +1008,7 @@ function Ship:createMemoryRecord(parentRecord)
     nameRecord.Address = self.Address + 0x0160
     nameRecord.Description = "Name"
     nameRecord.Type = vtString
-    nameRecord.String.Size = 10
+    nameRecord.String.Size = 32
     nameRecord.appendToEntry(shipRecord)
 
     local weaponsRecord = addressList.createMemoryRecord()
