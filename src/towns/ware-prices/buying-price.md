@@ -19,7 +19,7 @@ Within every interval \\(i\\) the price \\(p\_i\\) is defined as:
 \end{aligned}
 \\]
 
-where \\(w\_b\\) is the amount being bought from \\(i\\) and \\(f\\) is defined as:
+where \\(w\_i\\) is the amount being bought from \\(i\\) and \\(f\\) is defined as:
 \\[
 \begin{aligned}
     f\_4 &= 0.6\\\\
