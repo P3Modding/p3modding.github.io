@@ -158,8 +158,18 @@ def tests():
 
     stock = 0
     sell_amount = 50 * 2000
+    price = get_price(stock, sell_amount, SAMPLE_THRESHOLDS, PIG_IRON_BASE_PRICE, 0)
+    assert price == pytest.approx(47740.00297486782)
+
+    stock = 0
+    sell_amount = 50 * 2000
     price = get_price(stock, sell_amount, SAMPLE_THRESHOLDS, PIG_IRON_BASE_PRICE, 1)
     assert price == pytest.approx(46860.00292003155)
+
+    stock = 0
+    sell_amount = 50 * 2000
+    price = get_price(stock, sell_amount, SAMPLE_THRESHOLDS, PIG_IRON_BASE_PRICE, 2)
+    assert price == pytest.approx(45980.00286519527)
 
     stock = 17000
     sell_amount = 1 * 2000

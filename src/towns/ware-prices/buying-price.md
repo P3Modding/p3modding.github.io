@@ -23,7 +23,7 @@ where \\(w\_i\\) is the amount being bought from \\(i\\) and \\(f\\) is defined 
 \\[
 \begin{aligned}
     f\_4 &= 0.6\\\\
-    f_{i} &=  m_i - v_i \underbrace{\frac{w\_{relative\\_stock} - w\_{relative\\_remain}}{2 * \text{interval_width}}}\_{\in [0; 1]}
+    f_{i} &=  m_i - v_i \underbrace{\frac{w\_{relative\\_stock} + w\_{relative\\_remain}}{2 * \text{interval_width}}}\_{\in [0; 1]}
 \end{aligned}
 \\]
 
