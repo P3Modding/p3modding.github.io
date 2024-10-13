@@ -110,6 +110,51 @@ def plot_example1():
     plt.savefig("buying-price-pigiron.png", dpi=150)
 
 
+def plot_factor():
+    plt.clf()
+    params = {"mathtext.default": "regular"}
+    plt.rcParams.update(params)
+    fig, (ax1) = plt.subplots(1, 1)
+
+    # Intervals
+    left = 0
+    for i in range(0, len(SAMPLE_THRESHOLDS)):
+        t = SAMPLE_THRESHOLDS[i]
+        bar = ax1.barh(0, t - left, 1, left=left, label=f"Interval {i}")
+        left += t - left
+
+    # Stock
+    stock = 50_000
+    ax1.barh(-1, stock, 1, label=f"Stock")
+
+    # Buying
+    buy = 20_000
+    ax1.barh(-2, buy, 1, left=stock - buy, label=f"Buy")
+
+    ax1.barh(
+        -3,
+        stock - SAMPLE_THRESHOLDS[0],
+        1,
+        left=SAMPLE_THRESHOLDS[0],
+        label=f"Relative Stock",
+    )
+    ax1.barh(
+        -4,
+        stock - buy - SAMPLE_THRESHOLDS[0],
+        1,
+        left=SAMPLE_THRESHOLDS[0],
+        label=f"Relative Remain",
+    )
+
+    ax1.set_yticks(
+        [0, -1, -2, -3, -4],
+        labels=["Intervals", "Stock", "Buy", "Relative Stock", "Relative Remain"],
+    )
+    ax1.set_ylim([-10, 1.5])
+    plt.tight_layout()
+    plt.savefig("buying-price-factor.png", dpi=200)
+
+
 def tests():
     stock = 2_000
     buy_amount = 1 * 2000
@@ -158,10 +203,14 @@ def tests():
 
 
 logging.basicConfig()
-tests()
 logging.getLogger().setLevel(logging.INFO)
+tests()
 plot_example1()
-logging.getLogger().setLevel(logging.DEBUG)
-LOGGER.info("success!")
+plot_factor()
 
-LOGGER.debug(get_price(22_000, 2_000, SAMPLE_THRESHOLDS, PIG_IRON_BASE_PRICE))
+
+stock = 6600
+buy_amount = 1 * 200
+t2 = [1000, 2000, 3000, 4000]
+price = get_price(stock, buy_amount, t2, 1.4)
+print(price)

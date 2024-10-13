@@ -23,6 +23,7 @@
         - [Base Price](./towns/ware-prices/base-price.md)
         - [Thresholds](./towns/ware-prices/thresholds.md)
         - [Buying Price](./towns/ware-prices/buying-price.md)
+        - [Selling Price](./towns/ware-prices/selling-price.md)
     - [Shipyard](./towns/shipyard.md)
     - [Taxes](./towns/taxes.md)
     - [Tavern](./towns/tavern.md)

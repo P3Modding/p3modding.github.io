@@ -10,7 +10,7 @@ The price formula operates on 5 intervals, and the 4 price thresholds specify th
 |1|[\\(t\_0\\); \\(t\_1\\)]|
 |2|[\\(t\_1\\); \\(t\_2\\)]|
 |3|[\\(t\_2\\); \\(t\_3\\)]|
-|4|[\\(t\_3\\); \\(\inf\\)]|
+|4|[\\(t\_3\\); \\(\infty\\)]|
 
 Within every interval \\(i\\) the price \\(p\_i\\) is defined as:
 \\[
@@ -27,8 +27,7 @@ where \\(w\_i\\) is the amount being bought from \\(i\\) and \\(f\\) is defined 
 \end{aligned}
 \\]
 
-where \\(w\_{relative\\_stock}\\) and \\(w\_{relative\\_remain}\\) are the stock's and remainder's offsets in the interval
-and \\(m\_i\\) and \\(v\_i\\) are defined as:
+where \\(w\_{relative\\_stock}\\) and \\(w\_{relative\\_remain}\\) are the stock's and remainder's offsets in the interval and \\(m\_i\\) and \\(v\_i\\) are defined as:
 
 |Bracket|\\(m\_i\\)|\\(v\_i\\)|
 |-|-|-|
@@ -38,11 +37,10 @@ and \\(m\_i\\) and \\(v\_i\\) are defined as:
 |3|0.8|0.2|
 
 ## Example
-Let's assume we buy pig iron from a town with the following stock and thresholds:
+Let's assume we buy pig iron from a town with the following thresholds:
 
 |Threshold|Value|
 |-|-|
-|Stock|110000|
 |t0|20000|
 |t1|60000|
 |t2|70000|
