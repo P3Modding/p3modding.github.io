@@ -25,7 +25,7 @@
         - [Buying Price](./towns/ware-prices/buying-price.md)
         - [Selling Price](./towns/ware-prices/selling-price.md)
     - [Shipyard](./towns/shipyard.md)
-        - [Lanterns and Material](./towns/shipyard/lanterns-and-material.md)
+        - [Lanterns and Materials](./towns/shipyard/lanterns-and-materials.md)
     - [Taxes](./towns/taxes.md)
     - [Tavern](./towns/tavern.md)
         - [Sailors](./towns/tavern/sailors.md)

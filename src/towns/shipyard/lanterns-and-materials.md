@@ -1,4 +1,4 @@
-# Lanterns and Material
+# Lanterns and Materials
 The displayed lanterns and materials correspond with the amount of employees the shipyard has:
 
 |Employees|Shipyard|
