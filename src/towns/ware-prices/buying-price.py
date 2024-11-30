@@ -91,16 +91,18 @@ def plot_example1():
             raise Exception(f"At {stock} stock, we have an increase in price")
 
     ax1.plot(x, t0_pigiron_y)
-    # """
+
     ax1.axvline(SAMPLE_THRESHOLDS[0])
-    ax1.text(SAMPLE_THRESHOLDS[0], 0, "$t_0$", va="bottom")
+    ax1.annotate("$t_0$", xy=(SAMPLE_THRESHOLDS[0], ax1.get_ylim()[1]), xycoords='data', xytext=(2, -10), textcoords='offset points')
     ax1.axvline(SAMPLE_THRESHOLDS[1])
-    ax1.text(SAMPLE_THRESHOLDS[1], 0, "$t_1$", va="bottom")
+    ax1.annotate("$t_1$", xy=(SAMPLE_THRESHOLDS[1], ax1.get_ylim()[1]), xycoords='data', xytext=(2, -10), textcoords='offset points')
     ax1.axvline(SAMPLE_THRESHOLDS[2])
-    ax1.text(SAMPLE_THRESHOLDS[2], 0, "$t_2$", va="bottom")
+    ax1.annotate("$t_2$", xy=(SAMPLE_THRESHOLDS[2], ax1.get_ylim()[1]), xycoords='data', xytext=(2, -10), textcoords='offset points')
     ax1.axvline(SAMPLE_THRESHOLDS[3])
-    ax1.text(SAMPLE_THRESHOLDS[3], 0, "$t_3$", va="bottom")
-    # """
+    ax1.annotate("$t_3$", xy=(SAMPLE_THRESHOLDS[3], ax1.get_ylim()[1]), xycoords='data', xytext=(2, -10), textcoords='offset points')
+
+    ax1.axhline(PIG_IRON_BASE_PRICE * 2000)
+    ax1.annotate("Base Price", xy=(0, PIG_IRON_BASE_PRICE * 2000), xycoords='data', xytext=(2, -10), textcoords='offset points')
 
     ax1.set_title("Buying Price of 1 Pigiron Bundle")
     ax1.set_xlabel("Stock")
