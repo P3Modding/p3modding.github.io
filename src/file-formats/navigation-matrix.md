@@ -3,7 +3,7 @@ The vanilla navigation matrix is stored in `./navdata/nav_matrix.dat`.
 The file format is defined as:
 ```
           | 00  01   02  03   04  05   06  07 |
-00000000  | Height | Width  | Data            |
+00000000  | Width  | Height | Data            |
 00000008  | Data (cont)                       |
 ```
 where `Width` and `Height` denote the dimensions of a matrix, and `Data` is an `u8` array of length `Width*Height`.
