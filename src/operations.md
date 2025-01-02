@@ -87,6 +87,7 @@ The following operations have been identified:
 |0x37|Join Guild|
 |0x39|Bathe|
 |0x41|Form Militia Squad|
+|0x52|Tavern Interaction|
 |0xc2|Autosave|
 |0xc4|Advance Time|
 |0x9f|Start Ship Combat|
