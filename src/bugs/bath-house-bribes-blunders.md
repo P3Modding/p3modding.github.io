@@ -47,7 +47,7 @@ Since neither `previous_bribing_merchant` nor `merchant_index` change during the
 This doesn't make any sense as it is, so it is assumed that `bribed_councillors` was intended to be the amount of already bribed councillors in that town, and that the comparison with 2 was intended to prevent a player from bribing the majority of councillors in one town.
 
 ## Fix
-All bugs are fixed by the [fox-bath-house-bribe-blunders](https://github.com/P3Modding/p3-lib/tree/master/mod-fix-bath-house-bribe-blunders) mod.
+All bugs are fixed by the [fix-bath-house-bribe-blunders](https://github.com/P3Modding/p3-lib/tree/master/mod-fix-bath-house-bribe-blunders) mod.
 
 ### Attribution to Merchant `1`
 The councillor's briber must be set to `-1` instead of `1` if the bribe fails and the councillor is not bribed by anyone else.
