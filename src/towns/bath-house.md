@@ -55,12 +55,29 @@ def calculate_bribe_result(amount: int, rank: int, already_bribed: bool):
         return BribeResult.FAILED
 ```
 
+### Result
 The result can be identified by the councillor's response:
 
 |Result|Response|
 |-|-|
-|Ok|"Aha, a bribe eh! But all right, I'll take your gold. We'll see what I can do for you at the appointed time."|
-|Good|"Oh, that's a very enticing sum. You can be certain of my loyalty."|
-|Failed|"What am I supposed to do with this pittance? You ought to realise yourself, that a man in my position expects a little more from someone of your standing."|
+|Ok|*"Aha, a bribe eh! But all right, I'll take your gold. We'll see what I can do for you at the appointed time."*|
+|Good|*"Oh, that's a very enticing sum. You can be certain of my loyalty."*|
+|Failed|*"What am I supposed to do with this pittance? You ought to realise yourself, that a man in my position expects a little more from someone of your standing."*|
 
-Both `Ok` and `Good` enqueue a *Bath House Bribe Success* operation, while `Failed` enqueues a *Bath House Bribe Failed* operation.
+Both `Ok` and `Good` enqueue a *Bath House Bribe Success* operation, while `Failed` enqueues a *Bath House Bribe Failure* operation.
+**The failure operation is bugged, as discussed in the Known Bugs chapter.**
+
+### Status
+The current status of a councillor can be inferred by his lines:
+
+|Status|Response|
+|-|-|
+|Bribed by merchant|*"So we meet again, John Doe. I can very well remember how pleasant our last meeting was."*|
+|Bribed by other merchant|*"Ah! You're here as well, John Doe? I have only very recently spoken to one of your competitors."*|
+|Not bribed by anyone, annoyed|*"Are you there again?! Let me have my bath in peace, please."*|
+
+**The annoyance of the councillor with a given index is bugged and saved globally, as discussed in the Known Bugs chapter.**
+
+### Limits
+The success operation has a check which probably should prevent a merchant from bribing more than 2 councillors in one town.
+**However, this check is bugged, as discussed in the Known Bugs chapter.**

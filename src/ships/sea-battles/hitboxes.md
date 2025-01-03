@@ -51,4 +51,4 @@ The jump table at `0x0060AD69` maps intersections of the projectile's path with 
 This defines the following line-to-location mapping:
 ![](hitboxes_impact_location.png)
 
-**The mapping is incorrect, as discussed in the Known Bugs chapter**.
+**The mapping is incorrect, as discussed in the Known Bugs chapter.**
