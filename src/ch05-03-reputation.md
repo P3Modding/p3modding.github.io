@@ -142,6 +142,12 @@ The `handle_crime_social_reputation_impact` function at `0x004F8F10` reduces the
 |0xe|-6.0|
 |0xf|-8.0|
 
+### Bath House Bribes
+A successful bribe increases the social reputation by `min(amount * 0.000099999997, 3.0)`.
+Consequently, successfully bribing with 30000 or more gives the maximum social reputation gain.
+
+A failed bribe decreases the social reputation by `2.0`.
+
 ### Degradation
 
 ## Trading

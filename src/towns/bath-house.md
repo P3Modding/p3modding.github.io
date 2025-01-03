@@ -40,6 +40,8 @@ It defines the following *bribe base factors* for each rank:
 
 The bribe result is calculated as follows:
 ```python
+BRIBE_BASE_FACTORS = [0, 1, 2, 3, 5, 7, 10, 15]
+
 def calculate_expected_bribe(rank: int, rand: int, already_bribed: bool):
     price = 500 * (rand % 11 + 4 * BRIBE_BASE_FACTORS[rank] + 16)
     if already_bribed:
