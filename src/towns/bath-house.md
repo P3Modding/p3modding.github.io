@@ -4,7 +4,7 @@
 Every town with a bathhouse has 4 councillors which can be bribed.
 
 ### Attendance
-Between 0 and 4 bribable councillors are present in the bath house.
+Between 0 and 4 bribable councillors attend the bath house.
 The bath house panel has an array of attendance selection timestamps at offset `0xd4`, whose entries denote when the attendance in a given town will be updated.
 These timestamps are updated to `now + 0x100` when
 - the bath house window is closed.
@@ -12,6 +12,7 @@ These timestamps are updated to `now + 0x100` when
 - the options screen is opened.
 - any window is opened after the bath house window has just been closed.
 
+The pool of attending councillors is updated when the bath house window is opened and the selection timestamp is smaller than `now`.
 Therefore, continuously opening an individual bath house locks the current attendance.
 
 Attendance is decided as follows:
@@ -39,14 +40,14 @@ It defines the following *bribe base factors* for each rank:
 
 The bribe result is calculated as follows:
 ```python
-def calculate_expected_bribe(rank: int, already_bribed: bool):
+def calculate_expected_bribe(rank: int, rand: int, already_bribed: bool):
     price = 500 * (rand % 11 + 4 * BRIBE_BASE_FACTORS[rank] + 16)
     if already_bribed:
         price *= 2
     return price
 
-def calculate_bribe_result(amount: int, rank: int, already_bribed: bool):
-    price = calculcate_expected_bribe(rank, already_bribed)
+def calculate_bribe_result(amount: int, rank: int, rand: int, already_bribed: bool):
+    price = calculcate_expected_bribe(rank, rand, already_bribed)
     if amount < price:
         return BribeResult.OK
     elif amount >= price * 1.5:
@@ -54,6 +55,19 @@ def calculate_bribe_result(amount: int, rank: int, already_bribed: bool):
     else:
         return BribeResult.FAILED
 ```
+
+For unbribed councillors, this produces the following minimum and maximum bribes:
+
+|Rank|Min|Max|
+|-|-|-|
+|Shopkeeper|8000|13000|
+|Trader|10000|15000|
+|Merchant|12000|17000|
+|Travelling Merchant|14000|19000|
+|Councillor|18000|23000|
+|Patrician|22000|27000|
+|Mayor|28000|33000|
+|Alderman|38000|43000|
 
 ### Result
 The result can be identified by the councillor's response:
@@ -76,7 +90,7 @@ The current status of a councillor can be inferred by his lines:
 |Bribed by other merchant|*"Ah! You're here as well, John Doe? I have only very recently spoken to one of your competitors."*|
 |Not bribed by anyone, annoyed|*"Are you there again?! Let me have my bath in peace, please."*|
 
-**The annoyance of the councillor with a given index is bugged and saved globally, as discussed in the Known Bugs chapter.**
+**The annoyance of a councillor with a given index is bugged and saved globally, as discussed in the Known Bugs chapter.**
 
 ### Limits
 The success operation has a check which probably should prevent a merchant from bribing more than 2 councillors in one town.
