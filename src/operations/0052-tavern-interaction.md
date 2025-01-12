@@ -33,7 +33,7 @@ An investigation is started only if all of the following conditions are met:
 - The following formula is true: `(rand & 0x3ff) < 102`
 - The following formula is true: `weaponsdealer_timestamp < now + 0x200`
 
-If all conditions are met, the investigation scheduled task is scheduled at `(now + 0x200) | 0x80`, and the weapons dealer timestamp is set to `now`.
+If all conditions are met, a criminal investigation scheduled task is scheduled to `(now + 0x200) | 0x80`, and the weapons dealer timestamp is set to `now`.
 
 ## Burglar
 The burglar is handled like the weapons dealer, except the exceptions for alderman, local mayor and town status don't exist.

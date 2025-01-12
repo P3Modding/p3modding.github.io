@@ -62,7 +62,7 @@ TODO list options
 
 ## Social
 `local_social_rep` is the merchant's social reputation in the town.
-It is changed through by many actions, and degrades over time.
+It is changed through many actions, and degrades over time.
 
 ### Recurring Constants
 The following values appear in multiple calculations, and appear to have fixed values.
