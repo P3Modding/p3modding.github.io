@@ -43,4 +43,3 @@ If the repayment sum is bigger than the safe repayment sum, the following comput
 ```c
 rand() & 0x3ff < 75 * ((repayment_sum - safe_repayment_sum + 1250) / 1250)
 ```
-Therefore, exceeding the safe repayment sum by `n * 1250` causes a default chance of `n : 1024-n`.
