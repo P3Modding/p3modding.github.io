@@ -33,6 +33,7 @@
     - [Taxes](./towns/taxes.md)
     - [Tavern](./towns/tavern.md)
         - [Sailors](./towns/tavern/sailors.md)
+    - [Money Lender](./towns/money-lender.md)
     - [Bath House](./towns/bath-house.md)
     - [Sieges](./towns/sieges.md)
         - [Initialization](./towns/sieges/initialization.md)
