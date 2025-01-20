@@ -12,7 +12,7 @@ When the confirm button is clicked and if the merchant has enough money, the sel
 
 The interest rate is calculated as follows:
 \\[
-    f_{setting} * (\sqrt{\frac{1}{\text{weeks} * \text{amount}}} * 300 + 1.2)
+    f_{setting} * (\sqrt{\frac{1}{\text{weeks} * \text{amount}}} * 300 + 1.2) * 0.1
 \\]
 
 where \\(f_{setting}\\) is defined as:
