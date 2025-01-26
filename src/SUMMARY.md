@@ -74,6 +74,7 @@
     - [Town Hall Details](./patches/town-hall-details.md)
 - [File Formats](./file-formats.md)
     - [CPR](./file-formats/cpr.md)
+    - [Trade Routes (.rou)](./file-formats/rou.md)
     - [Navigation Matrix](./file-formats/navigation-matrix.md)
     - [Navigation Vector](./file-formats/navigation-vector.md)
     - [Navpoint Matrix](./file-formats/navpoint-matrix.md)
