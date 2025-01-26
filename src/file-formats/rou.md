@@ -31,4 +31,4 @@ The "direction" of a transaction is encoded in the price and amount:
 |0|Negative|Ship -> Office|
 |0|Positive|Office -> Ship|
 |Positive|Positive|Ship -> Town|
-|Negative|Any|Town -> Ship|
+|Negative|Positive|Town -> Ship|
