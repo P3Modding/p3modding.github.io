@@ -65,6 +65,7 @@
     - [Invulnerable Ship Artillery Slots](./bugs/invulnerable-ship-artillery-slots.md)
     - [Bath House Bribes Blunders](./bugs/bath-house-bribes-blunders.md)
     - [Multiplayer Locks](./bugs/multiplayer-locks.md)
+    - [Uncompressed Trade Route Loading](./bugs/uncompressed-trade-route-loading.md)
 - [Patches](./patches.md)
     - [High Res](./patches/high-res.md)
     - [Increase Alderman "Found Settlement" Mission Limit](./patches/increase-alderman-found-settlement-limit.md)
