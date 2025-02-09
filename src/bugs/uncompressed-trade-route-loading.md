@@ -6,6 +6,7 @@ However, its caller fails to allocate the correct amount of memory, so the loadi
 
 ## Details
 Instead of calculating the absolute of the output size, the output size is `and`ed with `0x3fffffff`:
+
 ![](uncompressed-trade-route-loading.png)
 
 For negative output sizes the result is very big, so the allocation fails, and the trade route loading is aborted.
