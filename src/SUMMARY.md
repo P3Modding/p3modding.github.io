@@ -50,6 +50,7 @@
             - [Range](./ships/sea-battles/projectiles/range.md)
             - [Impact](./ships/sea-battles/projectiles/impact.md)
         - [Reefs](./ships/sea-battles/reefs.md)
+- [Auto Traders](./auto-traders.md)
 - [Letters](./letters.md)
     - [Charge](./letters/0a-charge.md)
     - [Indictment](./letters/19-indictment.md)
