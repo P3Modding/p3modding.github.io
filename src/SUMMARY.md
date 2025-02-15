@@ -13,6 +13,7 @@
 - [Operations](./operations.md)
     - [Bath House Bribe Success](./operations/0042-bath-house-bribe-success.md)
     - [Bath House Bribe Failure](./operations/0043-bath-house-bribe-failure.md)
+    - [Make Town Hall Offer](./operations/0048-make-town-hall-offer.md)
     - [Tavern Interaction](./operations/0052-tavern-interaction.md)
 - [Scheduled Tasks](./scheduled-tasks/0000.md)
     - [Criminal Investigation](./scheduled-tasks/0005-criminal-investigation.md)

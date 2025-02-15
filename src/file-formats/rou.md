@@ -32,3 +32,5 @@ The "direction" of a transaction is encoded in the price and amount:
 |0|Positive|Office -> Ship|
 |Positive|Positive|Ship -> Town|
 |Negative|Positive|Town -> Ship|
+
+The "Max" amount is represented by `1_000_000_000` for both barrel and bundle wares.

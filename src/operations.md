@@ -89,6 +89,7 @@ The following operations have been identified:
 |0x41|Form Militia Squad|
 |0x42|Bath House Bribe Success|
 |0x43|Bath House Bribe Failure|
+|0x48|Make Town Hall Offer|
 |0x52|Tavern Interaction|
 |0xc2|Autosave|
 |0xc4|Advance Time|
