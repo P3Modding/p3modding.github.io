@@ -20,6 +20,7 @@
     - [Update Shipyard Experience](./scheduled-tasks/0006-update-shipyard-experience.md)
     - [Celebration](./scheduled-tasks/0007-celebration.md)
     - [Update Sailor Pools](./scheduled-tasks/0026-update-sailor-pools.md)
+    - [Council Meeting](./scheduled-tasks/002e-council-meeting.md)
     - [Unfreeze Port](./scheduled-tasks/0053-unfreeze-port.md)
 - [Towns](./towns.md)
     - [Ticks](./towns/ticks.md)

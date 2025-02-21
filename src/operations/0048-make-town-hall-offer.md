@@ -17,8 +17,8 @@ struct operation_48_make_town_hall_offer
 ```
 
 ## Normal Towns
-For normal towns a *Council Meeting* scheduled task is scheduled at `0xE00` ticks (14 days) ahead.
+For normal towns a *Council Meeting* scheduled task is scheduled at the given *meeting timestamp*.
 
 ## Hanseatic Settlements
 Hanseatic settlements have no council and expand military or enlarge town wall offers.
-A change to the head tax is applied immediately, and an *Extra Tax* scheduled task is scheduled at the next tick.
+A change to the head tax is applied immediately, an *Extra Tax* scheduled task is scheduled at the next tick.
