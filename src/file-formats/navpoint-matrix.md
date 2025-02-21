@@ -14,10 +14,11 @@ Consequently the main diagonal's distance is always 0:
 \\[
     x = y \implies dist_{xy} = dist_{yx} = 0 \land next_{xy} = next_{yx} = x = y
 \\]
-Cells of directly connected navpoints and of navpoints connected through only one other navpoint are symmetric:
+Cells of directly connected navpoints point to the other cell:
 \\[
     next_{xy} = y \implies next_{yx} = x
 \\]
+Cells of navpoints connected through only one other navpoint are symmetric:
 \\[
     next_{xz} = y \land next_{yz} = z \implies next_{zx} = y \land next_{yx} = x
 \\]
