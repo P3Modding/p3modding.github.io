@@ -1,5 +1,4 @@
 # Tavern Interaction
-
 The tavern interaction operations are enqueued by the tavern's panel when switching between the tavern's pages.
 The following fields have been identified:
 

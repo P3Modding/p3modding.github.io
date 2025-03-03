@@ -15,6 +15,7 @@
     - [Bath House Bribe Failure](./operations/0043-bath-house-bribe-failure.md)
     - [Make Town Hall Offer](./operations/0048-make-town-hall-offer.md)
     - [Tavern Interaction](./operations/0052-tavern-interaction.md)
+    - [Start Criminal Investigation](./operations/0081-start-criminal-investigation.md)
 - [Scheduled Tasks](./scheduled-tasks/0000.md)
     - [Criminal Investigation](./scheduled-tasks/0005-criminal-investigation.md)
     - [Update Shipyard Experience](./scheduled-tasks/0006-update-shipyard-experience.md)
