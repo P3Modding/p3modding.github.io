@@ -84,4 +84,5 @@
     - [Navigation Vector](./file-formats/navigation-vector.md)
     - [Navpoint Matrix](./file-formats/navpoint-matrix.md)
     - [Fixed Paths](./file-formats/fixed-paths.md)
+- [Community Tools](./community-tools.md)
 - [Appendix](./ch80-00-appendix.md)
