@@ -42,13 +42,6 @@ class Town:
             dwellings_capacity_poor,
         ]
 
-    def get_divisor(self, level):
-        if level == 0:
-            return 213 if self.has_mint else 320
-        elif level == 1:
-            return 160
-        raise Exception()
-
     def update_population_levels(self):
         self.update_population_level(0)
         self.update_population_level(1)
@@ -63,7 +56,7 @@ class Town:
         LOGGER.debug(f"{level} target: {target} stock: {self.citizens[level]}")
         if target < self.citizens[level]:
             # Current stock exceeds target
-            demoted = 2 * self.citizens[level] / target + 1
+            demoted = 2 * self.citizens[level] // target + 1
             if demoted > self.citizens[level]:
                 demoted = self.citizens[level] - 1
             self.citizens[2] += demoted
@@ -78,6 +71,13 @@ class Town:
                 LOGGER.debug(f"promoting {promoted} poors to {level}")
                 self.citizens[2] -= promoted
                 self.citizens[level] += promoted
+
+    def get_divisor(self, level):
+        if level == 0:
+            return 213 if self.has_mint else 320
+        elif level == 1:
+            return 160
+        raise Exception()
 
 
 def plot_example1():
