@@ -45,6 +45,7 @@ class Town:
     def update_population_levels(self):
         self.update_population_level(0)
         self.update_population_level(1)
+        # TODO poor emigration
 
     def update_population_level(self, level: int):
         target = (

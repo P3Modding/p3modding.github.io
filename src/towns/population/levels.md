@@ -50,7 +50,7 @@ class Town:
         LOGGER.debug(f"{level} target: {target} stock: {self.citizens[level]}")
         if target < self.citizens[level]:
             # Current stock exceeds target
-            demoted = 2 * self.citizens[level] / target + 1
+            demoted = 2 * self.citizens[level] // target + 1
             if demoted > self.citizens[level]:
                 demoted = self.citizens[level] - 1
             self.citizens[2] += demoted
