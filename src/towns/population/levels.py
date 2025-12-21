@@ -85,7 +85,7 @@ def plot_example1():
     plt.clf()
     labels = ["Rich", "Wealthy", "Poor"]
     fig, (axs) = plt.subplots(1, 4, sharey="all", sharex="all", figsize=(10, 4))
-    plot_example1_subplot(axs[0], 5, False)
+    plot_example1_subplot(axs[0], 5, False, True)
     plot_example1_subplot(axs[1], 5, True)
     plot_example1_subplot(axs[2], 80, False)
     plot_example1_subplot(axs[3], 80, True)
@@ -105,7 +105,7 @@ def plot_example1():
     plt.savefig("levels1.png", dpi=100, bbox_inches="tight")
 
 
-def plot_example1_subplot(ax, satisfaction: int, has_mint: bool):
+def plot_example1_subplot(ax, satisfaction: int, has_mint: bool, label: bool = False):
     ax.grid(axis="y")
     town = Town(50, 50, 900, satisfaction, satisfaction, satisfaction, has_mint)
     x = []
@@ -124,12 +124,10 @@ def plot_example1_subplot(ax, satisfaction: int, has_mint: bool):
     ax.plot(x, sat_y_rich, label="Rich")
     ax.plot(x, sat_y_wealthy, label="Wealthy")
     ax.plot(x, sat_y_poor, label="Poor")
+    ax.set_xlabel("Days")
+    if label:
+        ax.set_ylabel("Inhabitants (absolute)")
     ax.set_title(f"{satisfaction} Satisfaction {"(Mint)" if has_mint else "(no Mint)"}")
 
 
-def plot_example2():
-    pass
-
-
 plot_example1()
-plot_example2()
