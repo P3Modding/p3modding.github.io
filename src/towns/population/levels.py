@@ -126,7 +126,7 @@ def plot_example1_subplot(ax, satisfaction: int, has_mint: bool, label: bool = F
     ax.plot(x, sat_y_poor, label="Poor")
     ax.set_xlabel("Days")
     if label:
-        ax.set_ylabel("Inhabitants (absolute)")
+        ax.set_ylabel("Inhabitants")
     ax.set_title(f"{satisfaction} Satisfaction {"(Mint)" if has_mint else "(no Mint)"}")
 
 
