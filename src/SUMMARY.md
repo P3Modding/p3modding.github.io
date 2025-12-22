@@ -41,6 +41,7 @@
         - [Sailors](./towns/tavern/sailors.md)
     - [Money Lender](./towns/money-lender.md)
     - [Bath House](./towns/bath-house.md)
+    - [Excess Consumption](./towns/excess_consumption.md)
     - [Sieges](./towns/sieges.md)
         - [Initialization](./towns/sieges/initialization.md)
 - [Merchants](./ch05-00-merchants.md)
