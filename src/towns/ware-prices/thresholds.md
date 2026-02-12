@@ -44,7 +44,7 @@ fn update_town_price_thresholds(town) {
                     ware_threshold_bitmask_honey |
                     ware_threshold_bitmask_spices |
                     ware_threshold_bitmask_wine;
-            } else if own.flags & TOWN_FLAG_FAMINE != 0 {
+            } else if town.flags & TOWN_FLAG_PLAGUE != 0 {
                 extra_demand_bitmask = ware_threshold_bitmask_grain |
                     ware_threshold_bitmask_meat |
                     ware_threshold_bitmask_fish |
