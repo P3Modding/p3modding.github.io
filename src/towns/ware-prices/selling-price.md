@@ -24,7 +24,7 @@ where \\(w\_i\\) is the amount being sold to \\(i\\) and \\(f\\) is defined as:
 \begin{aligned}
     f\_4 &= 0.5\\\\
     f\_{i} &=  m_i - v_i \underbrace{\frac{w\_{relative\\_stock} + w\_{relative\\_new\\_stock}}{2 * \text{interval_width}}}\_{\in [0; 1]}\\\\
-    f\_0 &=  d\_{trade\\_difficulty} - (v\_i - d\_{trade\\_difficulty}) \underbrace{\frac{w\_{relative\\_stock} + w\_{relative\\_new\\_stock}}{2 * \text{interval_width}}}\_{\in [0; 1]}
+    f\_0 &=  d\_{trade\\_difficulty} - (d\_{trade\\_difficulty} - v\_i) \underbrace{\frac{w\_{relative\\_stock} + w\_{relative\\_new\\_stock}}{2 * \text{interval_width}}}\_{\in [0; 1]}
 \end{aligned}
 \\]
 
