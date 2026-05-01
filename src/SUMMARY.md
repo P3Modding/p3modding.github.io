@@ -11,6 +11,7 @@
     - [Ship Types](./basics/ships.md)
     - [Ship Artillery](./basics/ship-artillery.md)
 - [Operations](./operations.md)
+    - [Join Guild](./operations/0037-join-guild.md)
     - [Bath House Bribe Success](./operations/0042-bath-house-bribe-success.md)
     - [Bath House Bribe Failure](./operations/0043-bath-house-bribe-failure.md)
     - [Make Town Hall Offer](./operations/0048-make-town-hall-offer.md)
