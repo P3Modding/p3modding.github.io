@@ -24,3 +24,5 @@ render.
 
 `.aim` files can be converted to and from PNG with the community `aim_converter`
 tool (`to-png` / `to-aim`).
+
+[To be completed]

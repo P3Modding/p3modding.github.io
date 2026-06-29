@@ -15,8 +15,8 @@ A sample file holds 5 sections (60 nodes, 303 points):
 
 | Section | Nodes | Description |
 |-|-|-|
-| 0 | 24 | main road network (polylines starting near `y = 10`) |
-| 1, 2 | 3 + 3 | long boundary / route paths |
+| 0 | 24 | ships town docking path (polylines starting near `y = 10`) |
+| 1, 2 | 3 + 3 | citizen route paths (those boundaries have to be 22pixel apart) |
 | 3 | 1 | small 4 point region |
 | 4 | 29 | detail features |
 
