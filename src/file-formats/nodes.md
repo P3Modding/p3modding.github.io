@@ -17,8 +17,8 @@ A sample file holds 5 sections (60 nodes, 303 points):
 |-|-|-|
 | 0 | 24 | ships town docking path (polylines starting near `y = 10`) |
 | 1, 2 | 3 + 3 | citizen route paths (those boundaries have to be 22pixel apart) |
-| 3 | 1 | small 4 point region |
-| 4 | 29 | detail features |
+| 3 | 1 | fishermen boat path? |
+| 4 | 29 | mayor travel path? |
 
 The coordinates use a pixel/unit space (observed `X` `17..4352`, `Y`
 `10..2353`), not the tile grid.
